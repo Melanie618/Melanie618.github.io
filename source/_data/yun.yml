@@ -7,8 +7,8 @@ avatar:
   mickey_mouse: false
   status:
     enable: true
-    emoji: 😭
-    message: 不想上班
+    emoji: 😊
+    message: 永远相信美好的事情即将发生
 
 # Favicon
 # # ---------------
@@ -53,9 +53,9 @@ menu:
       path: /tags/
       icon: icon-price-tag-3-line
   custom:
-    title: 文档
-    path: https://yun.yunyoujun.cn
-    icon: icon-settings-line
+    title: 留言板
+    path: /about/#comment
+    icon: icon-clipboard-line
 
 # UI
 banner:
@@ -95,7 +95,7 @@ fireworks:
 
 # Cursor 光标
 cursor:
-  enable: false
+  enable: true
   default: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/css/md-cursors/pointer.cur
   pointer: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/css/md-cursors/link.cur
   text: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/css/md-cursors/text.cur
