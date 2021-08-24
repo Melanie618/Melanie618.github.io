@@ -2,7 +2,7 @@
 
 Hexo 主题：[Yun](https://github.com/YunYouJun/hexo-theme-yun/)
 
-- 主站：[yunyoujun.cn](https://www.yunyoujun.cn) | [yunyoujun.github.io](https://yunyoujun.github.io)
+- 主站：[melanie618.github.io](https://melanie618.github.io)
 
 ## Use
 
