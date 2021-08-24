@@ -3,12 +3,9 @@ title: 关于我
 date: 2020-01-01 10:48:25
 type: "about"
 updated: 2021-02-23 15:10:32
-aplayer: true
 reward: true
 icon: icon-cloud-line
 ---
-
-{% meting "5382380646" "netease" "playlist" "theme:#C20C0C"%}
 
 > ## Me
 >

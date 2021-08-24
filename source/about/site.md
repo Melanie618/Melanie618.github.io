@@ -3,13 +3,9 @@ title: 关于站点
 date: 2020-01-01 10:48:25
 type: about
 updated: 2021-02-23 15:10:32
-aplayer: true
 reward: true
 icon: icon-home-4-line
 ---
-
-{% meting "483937795" "netease" "song" "theme:#C20C0C"%}
-<!-- {% meting "5382380646" "netease" "playlist" "theme:#C20C0C"%} -->
 
 ## Blog
 
