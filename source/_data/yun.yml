@@ -1,0 +1,172 @@
+# 头像
+avatar:
+  enable: true
+  url: /images/avatar.jpg
+  rounded: true
+  opacity: 1
+  mickey_mouse: false
+  status:
+    enable: true
+    emoji: 😭
+    message: 不想上班
+
+# Favicon
+# # ---------------
+# favicon: /favicon.ico
+
+# Social Links.
+social:
+  - name: GitHub
+    link: https://github.com/Melanie618
+    icon: icon-github-line
+    color: "#6e5494"
+  - name: 微博
+    link: https://weibo.com/LikeSunshineADevil
+    icon: icon-weibo-line
+    color: "#E6162D"
+  - name: 网易云音乐
+    link: https://music.163.com/#/user/home?id=1624382187
+    icon: icon-netease-cloud-music-line
+    color: "#C20C0C"
+  - name: 知乎
+    link: https://www.zhihu.com/people/Melanie618
+    icon: icon-zhihu-line
+    color: "#0084FF"
+  - name: E-Mail
+    link: mailto:promiseyou_dear@163.com
+    icon: icon-mail-line
+    color: "#8E71C1"
+
+# main menu navigation
+menu:
+  home:
+    path: /
+    icon: icon-home-4-line
+  list:
+    - type: archives
+      path: /archives/
+      icon: icon-archive-line
+    - type: categories
+      path: /categories/
+      icon: icon-folder-2-line
+    - type: tags
+      path: /tags/
+      icon: icon-price-tag-3-line
+  custom:
+    title: 文档
+    path: https://yun.yunyoujun.cn
+    icon: icon-settings-line
+
+# UI
+banner:
+  enable: true
+  title: 你看起来很好吃
+  src: /js/ui/banner.js
+  border: true
+  cloud:
+    enable: true
+    color: "white"
+  go_down:
+    enable: true
+    icon: icon-arrow-down-s-line
+    
+# 图片背景
+bg_image:
+  enable: true
+  url: /images/3.jpg # recomend image related to your mode
+  dark: /images/1.jpg
+  # blur: 30px
+  opacity: 1
+
+# 搜索背景
+search:
+  modal: true
+  bg_image: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/bg/stars-timing-2.jpg
+  dark_bg_image: xxx
+  # placeholder:
+
+# 点击烟花效果
+fireworks:
+  enable: true
+  colors:
+    - "102, 167, 221"
+    - "62, 131, 225"
+    - "33, 78, 194"
+
+# Cursor 光标
+cursor:
+  enable: false
+  default: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/css/md-cursors/pointer.cur
+  pointer: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/css/md-cursors/link.cur
+  text: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/css/md-cursors/text.cur
+
+# 页面链接
+pages:
+
+# 打赏二维码
+reward:
+  enable: true
+  icon: icon-hand-coin-line
+  comment: I'm so cute. Please give me money.
+  # url: https://github.com/YunYouJun/yunyoujun.github.io/issues/96
+  methods:
+    - name: 支付宝
+      path: /images/alipay-qrcode.jpg
+      color: "#00A3EE"
+      icon: icon-alipay-line
+    - name: QQ 支付
+      path: /images/qqpay-qrcode.png
+      color: "#12B7F5"
+      icon: icon-qq-line
+    - name: 微信支付
+      path: /images/wechatpay-qrcode.jpg
+      color: "#2DC100"
+      icon: icon-wechat-pay-line
+
+# 页脚
+# Footer Settings
+# ---------------
+footer:
+  since: 2019
+
+  # Icon between year and copyright info.
+  icon:
+    # `heart` is recommended with animation in red (#ff0000).
+    name: icon-cloud-line
+    # If you want to animate the icon, set it to true.
+    animated: true
+    # Change the color of icon, using Hex Code.
+    color: "#0078E7"
+    # url: https://sponsors.yunyoujun.cn
+    # title: 云游君的赞助者们
+
+  powered:
+    # Hexo link (Powered by Hexo).
+    enable: false
+
+  # Beian icp information for Chinese users. In China, every legal website should have a beian icp in website footer.
+  # https://beian.miit.gov.cn/
+  beian:
+    enable: false
+    # icp: 苏ICP备xxxxxxxx号
+
+  live_time:
+    enable: true
+    prefix: 本博客已萌萌哒地运行
+    suffix: (●'◡'●)
+    start_time: "2019-04-12T00:00:00"
+
+# say something
+# https://say.elpsy.cn
+say:
+  enable: true
+  # api: https://say.elpsy.cn/sentences.json
+  # /data/sentences.json
+  api: https://cdn.jsdelivr.net/gh/ElpsyCN/say@gh-pages/sentences.json
+  # src is the script
+  src: /js/say.js
+  # https://developer.hitokoto.cn/sentence/
+  hitokoto:
+    enable: true
+    api: https://v1.hitokoto.cn
+    # api: https://v1.hitokoto.cn?c=a&c=b&c=c&c=d&c=k
