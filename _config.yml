@@ -106,3 +106,31 @@ deploy:
   repo: git@github.com:Melanie618/Melanie618.github.io.git
   branch: master
   message: ":bento: Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }})"
+
+# 搜索
+search:
+  path: search.xml
+  field: post
+
+# emoji表情支持
+githubEmojis:
+  enable: true
+  className: github-emoji
+  inject: true
+  styles:
+  customEmojis:
+
+# RSS 订阅支持
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+
+# aplayer
+aplayer:
+  meting: true
