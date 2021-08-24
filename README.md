@@ -43,18 +43,18 @@ git commit -m 'xxx'
 ### 更新博客内容
 
 ```sh
-📝 `:memo` update
+📝 update
 ```
 
 ### 更新配置内容
 ```sh
-🎨 `:art:` xxx
+🎨 xxx
 ```
 
 ### 更新主配置
 
 ```sh
-💄 `:lipstick:` xxx
+💄 xxx
 ```
 
 ### Other
