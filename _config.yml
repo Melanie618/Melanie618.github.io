@@ -2,13 +2,18 @@
 ## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
 
+# 公告
+notice:
+  enable: false
+  content: Thanks for playing my game.
+
 # Site
 title: 你看起来很好吃
 subtitle: ''
 description: ''
 keywords:
 author: 不以by
-language: zh
+language: 
 timezone: ''
 
 # URL
