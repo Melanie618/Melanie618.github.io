@@ -197,7 +197,7 @@ cdn:
     base:
     async:
       # Icon resources introduced by default, use iconfont
-      iconfont: //at.alicdn.com/t/font_1140697_stqaphw3j4.js
+      iconfont: //at.alicdn.com/t/font_1140697_dxory92pb0h.js
     defer:
 ```
 
@@ -307,7 +307,7 @@ head:
   js:
     async:
       # Here is the icon link you got from iconfont.
-      iconfont: //at.alicdn.com/t/font_1623879_a03x3er7qur.js
+      iconfont: //at.alicdn.com/t/font_1140697_dxory92pb0h.js
 ```
 
 ### [Remix Icon](https://remixicon.com/)
@@ -925,7 +925,7 @@ types:
 You can also set your icon and color for different links in `yun.yml`.
 
 ```yaml
-type:
+types:
   google:
     color: xxx
     icon: xxx
@@ -1091,6 +1091,8 @@ In `yun.yml`:
   - `dark`: code highlight style for dark
 
 (You can set the corresponding suitable highlight styles for the light and dark modes.)
+
+> Please refer to the code highlighting theme <https://cdn.jsdelivr.net/npm/prismjs@latest/themes/>.
 
 ```yaml
 codeblock:

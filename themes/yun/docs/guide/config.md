@@ -200,7 +200,7 @@ cdn:
     base:
     async:
       # 默认引入的图标资源，使用 iconfont
-      iconfont: //at.alicdn.com/t/font_1140697_stqaphw3j4.js
+      iconfont: //at.alicdn.com/t/font_1140697_dxory92pb0h.js
     defer:
 ```
 
@@ -310,7 +310,7 @@ head:
   js:
     async:
       # 这里是你从 iconfont 处获得的图标链接。
-      iconfont: //at.alicdn.com/t/font_1140697_stqaphw3j4.js
+      iconfont: //at.alicdn.com/t/font_1140697_dxory92pb0h.js
 ```
 
 ### [Remix Icon](https://remixicon.com/)
@@ -489,7 +489,7 @@ social:
     icon: icon-telegram-fill
     color: "#0088CC"
   - name: Travelling
-    link: https://travellings.now.sh/
+    link: https://travellings.link
     icon: icon-send-plane-2-line
     color: black
 ```
@@ -932,7 +932,7 @@ types:
 你也可以自己在 `yun.yml` 设置你跳转不同链接专属的图标和颜色。
 
 ```yaml
-type:
+types:
   google:
     color: xxx
     icon: xxx
@@ -974,7 +974,6 @@ hide: true
 sitemap: false
 indexing: false
 ---
-
 ```
 
 ::: tip
@@ -1103,6 +1102,8 @@ prismjs:
   - `dark`: 暗模式下，代码高亮主题
 
 （可以为亮暗模式分别设置对应适合的高亮样式。）
+
+> 代码高亮主题可参见 <https://cdn.jsdelivr.net/npm/prismjs@latest/themes/>。
 
 ```yaml
 codeblock:
