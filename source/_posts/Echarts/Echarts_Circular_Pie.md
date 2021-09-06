@@ -108,4 +108,4 @@ export default {
 </script>
 ```
 
-![pie](/images/pie.jpg)
+![pie](/images/Echarts/pie.jpg)

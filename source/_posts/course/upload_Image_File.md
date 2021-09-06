@@ -1,0 +1,186 @@
+---
+title: 上传文件
+# author: 不以by
+email: mailto:promiseyou_dear@163.com
+date: 2021-09-03 17:38:08
+tags: 
+  - 上传文件
+  - JavaScript
+  - File
+
+categories: 
+  - 不以by小教程
+  - File
+---
+
+## input = file
+通过 input = file 进行文件上传，上传的文件为图片时展示出图片，为其他格式时，展示上传的文件名
+
+<!-- ![未上传](/images/upload_Image_File/1.png)
+![上传后效果](/images/upload_Image_File/2.png) -->
+![上传对比](/images/upload_Image_File/4.png)
+
+```vue
+<template>
+  <el-form>
+    <el-form-item label="logo" prop="logo_url">
+      <label :for="'uploadImage'" class="firstImg el-button el-button--danger el-button--mini">
+        <input :id="'uploadImage'" type="file" :name="'uploadImage'" style="display:none" @change="uploadImage($event, temp)">
+        <!-- input 的 type 属性设置为file, 参数 temp 是提交表单是要提交的值 -->
+        <img v-show="temp.logo_url !== ''" :src="temp.logo_url" class="firstImg el-button--mini">
+        <!-- v-show="temp.logo_url !== ''" 对 temp 中的 logo_url 属性进行判断,当有值时说明上传了图片,则在页面上显示,否则显示上传 -->
+        <div v-show="temp.logo_url !== ''" class="avatar" />
+        <i class="el-icon-plus" />
+      </label>
+    </el-form-item>
+
+    <el-form-item label="武器" prop="armory_url">
+      <el-input v-model="temp.armory_url" style="max-width: 330px;" readonly />
+      <label :for="'file'" class="el-button el-button--danger el-button--mini">
+        <input :id="'file'" type="file" :name="'file'" style="display:none" @change="FileChange($event, temp)">
+        <span>
+          上传武器
+        </span>
+      </label>
+    </el-form-item>
+  </el-form>
+</template>
+```
+
+
+
+```vue
+<script>
+export default {
+    methods: {
+        uploadImage(e, row) {
+          if (e.target.files.length) {
+            var fileReader = new FileReader()
+            fileReader.readAsDataURL(e.target.files[0])
+            if (e.target.files[0].size > 200 * 1024) {
+              // 判断上传的文件大小
+              this.$notify({
+                title: 'error',
+                message: '请选择小于200KB的图片',
+                type: 'error',
+                duration: 2000
+              })
+              return
+            }
+            console.log(e.target.files[0])
+            fileReader.onload = () => {
+              row.logo_url = fileReader.result
+              // 给 temp 中的 logo_url 属性赋值
+              this.$notify({
+                title: 'Success',
+                message: '上传成功',
+                type: 'success',
+                duration: 2000
+              })
+              e.target.value = ''
+            }
+          }
+        },
+        FileChange(e, row) {
+          const input = e.target
+          const files = e.target.files
+          if (files && files[0]) {
+            const file = files[0]
+            if (file.size > 1024 * 1024 * 3) {
+              // 判断上传的文件大小
+              this.$notify({
+                title: 'error',
+                message: '文件大小不能超过3M',
+                type: 'error',
+                duration: 2000
+              })
+              input.value = ''
+              return false
+            } else {
+              row.armory_url = file.name
+              // 给 temp 中的 armory_url 属性赋值，file.name 是上传的文件名，可另外定义一个值用来展示
+            }
+          }
+        }
+    }
+}
+</script>
+```
+
+因为涉及文件上传，表单的 提交必须采起非编码格式 即： `{ 'content-type': 'multipart/form-data;boundary=${boundary}' }`
+`${boundary}` 为分割字符串。但无论是 `fetch、 ajax` 只要主动设置 `content-type` 为 `multipart/form-data`，不加后面的 `boundary`，会自动加到传输的格式中，致使后端取不到值。若是加了 `boundary`，又致使直接 `formData` 都取不到值。
+最终解决方案就是，`content-type` 不进行设置，只将 data 改成 `formData` 格式。浏览器会自动识别，自动设置为`content-type: multipart/form-data;boundary=随机值` 的形式。最终上传成功。
+
+可以在 api.js 文件中进行配置请求头参数：
+
+
+```js
+export function createFile(data) {
+  return request({
+    url: '/api/create',
+    method: 'POST',
+    headers: { 'Content-Type': 'multipart/form-data' },
+    data: searchParams(data)
+  })
+}
+```
+
+
+## 上传按钮鼠标浮动样式
+![鼠标浮动样式](/images/upload_Image_File/5.png)
+```css
+.avatar {
+  /* 蒙层，通过定位固定位置在图片上 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 148px;
+  height: 148px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  border-radius: 6px;
+  opacity: 0;
+}
+.avatar:hover {
+  /* 蒙层，鼠标浮动在图片上时展示 */
+  opacity: 0.8;
+}
+.firstImg {
+  width: 148px;
+  height: 148px;
+  background-color: #fff;
+  border: 1px dashed #c0ccda;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.el-icon-plus {
+  /* 上传图片中的 icon 图标 */
+  font-size: 28px;
+  color: #8c939d;
+  line-height: 148px;
+}
+.firstImg.el-button--danger:hover {
+  /* 鼠标浮动在图片上时添加 box-shadow 属性 */
+  background: #fff;
+  border: 1px dashed #c0ccda;
+  box-shadow:
+    0 0 8px 0 rgb(232 237 250 / 60%),
+    0 2px 4px 0 rgb(232 237 250 / 50%);
+  .el-icon-plus::before {
+    /* 鼠标浮动时图标位置 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
+  }
+}
+.firstImg.el-button--mini {padding: 0;}
+/* 去掉属性的默认样式，如有全局配置可忽略 */
+```
+
+参考文档：
+`input = file` https://blog.csdn.net/liwenfei123/article/details/94453335
+`content-type: multipart/form-data;` https://www.shangmayuan.com/a/e52e952d2229449b9a3dca6a.html

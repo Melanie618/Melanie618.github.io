@@ -28,7 +28,7 @@ View 指的是所看到的页面。ViewModel 是 mvvm 模式的核心，它是�
 
 MVVM 流程图：
 
-![MVVM流程图](/MVVM与MVC的区别/MVVM.png)
+![MVVM流程图](/images/vue/MVVM.png)
 
 #### MVVM 优点：
 
