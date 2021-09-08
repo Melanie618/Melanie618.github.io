@@ -1,7 +1,5 @@
 ---
 title: 高级node-npm发包指令
-author: 不以by
-email: promiseyou_dear@163.com
 date: 2020-11-09 11:00:51
 tags: 
    - npm

@@ -1,7 +1,5 @@
 ---
 title: vue面试题
-author: 不以by
-email: promiseyou_dear@163.com
 date: 2021-01-28 18:33:21
 tags: 
   - Vue

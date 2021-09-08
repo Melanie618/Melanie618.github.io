@@ -1,7 +1,5 @@
 ---
 title: vue---vuex与全局对象的区别及使用
-author: 不以by
-email: promiseyou_dear@163.com
 date: 2021-01-29 20:33:22
 tags: 
   - Vue

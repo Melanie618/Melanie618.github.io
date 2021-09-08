@@ -1,7 +1,5 @@
 ---
 title: git指令
-author: 不以by
-email: promiseyou_dear@163.com
 date: 2020-07-08 19:20:32
 tags: 
   - git

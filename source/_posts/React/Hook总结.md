@@ -1,7 +1,5 @@
 ---
 title: Hook总结
-author: 不以by
-email: promiseyou_dear@163.com
 date: 2020-12-27 18:38:08
 tags: 
   - React

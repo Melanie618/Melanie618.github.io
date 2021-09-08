@@ -1,7 +1,5 @@
 ---
 title: BFC原理
-author: 不以by
-email: promiseyou_dear@163.com
 date: 2020-12-13 19:25:56
 tags: 
   - css

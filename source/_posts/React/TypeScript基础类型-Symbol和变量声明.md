@@ -1,7 +1,5 @@
 ---
 title: TypeScript 基础类型,Symbol和变量声明
-author: 不以by
-email: promiseyou_dear@163.com
 date: 2020-12-29 14:33:00
 tags: 
   - React

@@ -1,7 +1,5 @@
 ---
 title: MVVM与MVC的区别
-author: 不以by
-email: promiseyou_dear@163.com
 date: 2020-12-25 20:34:16
 tags: 
   - Vue

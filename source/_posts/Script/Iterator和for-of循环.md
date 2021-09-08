@@ -1,7 +1,5 @@
 ---
 title: Iterator和for...of循环
-author: 不以by
-email: promiseyou_dear@163.com
 date: 2020-12-14 19:27:19
 tags: 
   - ECMAScript

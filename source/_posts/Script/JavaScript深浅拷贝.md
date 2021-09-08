@@ -1,7 +1,5 @@
 ---
 title: JavaScript深浅拷贝
-author: 不以by
-email: promiseyou_dear@163.com
 date: 2020-12-16 19:29:21
 tags: 
   - JavaScript

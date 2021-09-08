@@ -1,7 +1,5 @@
 ---
 title: this指向和改变方法
-author: 不以by
-email: promiseyou_dear@163.com
 date: 2021-01-14 18:31:13
 tags: 
   - JavaScript

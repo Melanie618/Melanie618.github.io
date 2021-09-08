@@ -1,7 +1,5 @@
 ---
 title: 函数的length属性
-author: 不以by
-email: promiseyou_dear@163.com
 date: 2021-01-05 19:15:07
 tags: 
     - JavaScript

@@ -1,7 +1,5 @@
 ---
 title: JavaScript数据类型
-author: 不以by
-email: promiseyou_dear@163.com
 date: 2020-12-20 19:23:08
 tags: 
   - JavaScript

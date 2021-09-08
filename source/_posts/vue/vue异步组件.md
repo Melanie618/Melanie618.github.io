@@ -1,7 +1,5 @@
 ---
 title: vue异步组件
-author: 不以by
-email: promiseyou_dear@163.com
 date: 2021-01-29 20:37:08
 tags: 
   - Vue

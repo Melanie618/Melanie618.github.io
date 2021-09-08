@@ -5,10 +5,9 @@ tags:
   - Echarts
   - 小教程
 categories:
-  - 不以by小教程
+  - 不以by小经验
   - Echarts
   - 饼图使用
-aplayer: true
 ---
 
 由于在项目中需要对数据进行可视化，也就是用图表展示，常用的图表插件有echarts，highcharts，这里选择了比较大众化的echarts。

@@ -1,7 +1,5 @@
 ---
 title: vue插槽
-author: 不以by
-email: promiseyou_dear@163.com
 date: 2021-01-29 19:52:53
 tags: 
   - Vue

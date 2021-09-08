@@ -1,7 +1,5 @@
 ---
 title: vue组件通信的八种方式
-author: 不以by
-email: promiseyou_dear@163.com
 date: 2021-01-09 17:31:18
 tags: 
   - Vue

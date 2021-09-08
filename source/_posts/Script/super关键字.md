@@ -1,7 +1,5 @@
 ---
 title: super关键字
-author: 不以by
-email: promiseyou_dear@163.com
 date: 2021-01-11 16:12:28
 tags: 
   - ECMAScript

@@ -1,7 +1,6 @@
 ---
 title: 下载文件
 # author: 不以by
-email: mailto:promiseyou_dear@163.com
 date: 2021-09-03 17:38:08
 tags: 
   - 下载文件
@@ -9,7 +8,7 @@ tags:
   - File
 
 categories: 
-  - 不以by小教程
+  - 不以by小经验
   - File
 ---
 

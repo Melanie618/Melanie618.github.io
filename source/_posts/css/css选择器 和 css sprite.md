@@ -1,7 +1,5 @@
 ---
 title: css选择器 和 css sprite
-author: 不以by
-email: promiseyou_dear@163.com
 date: 2021-01-26 17:22:40
 tags: 
   - css

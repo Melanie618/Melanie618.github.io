@@ -1,7 +1,5 @@
 ---
 title: Symbol
-author: 不以by
-email: promiseyou_dear@163.com
 date: 2020-12-11 20:10:31
 tags: 
   - ECMAScript

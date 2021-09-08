@@ -1,7 +1,5 @@
 ---
 title: react生命周期
-author: 不以by
-email: promiseyou_dear@163.com
 date: 2020-12-18 19:31:09
 tags: 
   - React

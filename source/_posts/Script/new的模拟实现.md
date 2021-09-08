@@ -1,7 +1,5 @@
 ---
 title: new的模拟实现
-author: 不以by
-email: promiseyou_dear@163.com
 date: 2021-01-13 18:40:17
 tags: 
   - JavaScript

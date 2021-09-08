@@ -1,7 +1,5 @@
 ---
 title: HTTP协议
-author: 不以by
-email: promiseyou_dear@163.com
 date: 2021-01-16 09:30:51
 tags: 
   - Http

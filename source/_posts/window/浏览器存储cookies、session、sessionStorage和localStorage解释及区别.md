@@ -1,7 +1,5 @@
 ---
 title: 浏览器存储cookies、session、sessionStorage和localStorage解释及区别
-author: 不以by
-email: promiseyou_dear@163.com
 date: 2020-12-22 19:34:01
 tags: 
   - JavaScript

@@ -1,7 +1,5 @@
 ---
 title: class的基本用法和继承
-author: 不以by
-email: promiseyou_dear@163.com
 date: 2020-12-28 15:07:19
 tags: 
   - ECMAScript

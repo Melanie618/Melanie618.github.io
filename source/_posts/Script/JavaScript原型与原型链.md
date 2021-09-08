@@ -1,7 +1,5 @@
 ---
 title: JavaScript原型与原型链
-author: 不以by
-email: promiseyou_dear@163.com
 date: 2021-01-15 19:30:59
 tags: 
   - JavaScript

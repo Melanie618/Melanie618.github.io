@@ -1,7 +1,5 @@
 ---
 title: history
-author: 不以by
-email: promiseyou_dear@163.com
 date: 2021-01-28 18:12:50
 tags: 
   - JavaScript

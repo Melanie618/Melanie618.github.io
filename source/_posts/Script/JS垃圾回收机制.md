@@ -1,7 +1,5 @@
 ---
 title: JS垃圾回收机制
-author: 不以by
-email: promiseyou_dear@163.com
 date: 2021-01-20 17:01:14
 tags: 
   - JavaScript

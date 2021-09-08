@@ -1,7 +1,5 @@
 ---
 title: Proxy
-author: 不以by
-email: promiseyou_dear@163.com
 date: 2020-12-29 09:07:47
 tags: 
   - ECMAScript

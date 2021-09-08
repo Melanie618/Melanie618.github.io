@@ -1,7 +1,5 @@
 ---
 title: webpack中loader的使用方法
-author: 不以by
-email: promiseyou_dear@163.com
 date: 2021-01-18 19:05:12
 tags: 
   - webpack

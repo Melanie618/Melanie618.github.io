@@ -1,7 +1,5 @@
 ---
 title: Promise对象
-author: 不以by
-email: promiseyou_dear@163.com
 date: 2020-12-15 19:28:30
 tags: 
   - Promise
