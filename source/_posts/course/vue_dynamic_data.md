@@ -81,3 +81,21 @@ getList() {
 以上这两种方式传值最终都是转换成了 formData.0.value 字符串，这是一个字符串，而不是通过 formData.0 来取 formData 数组的第一个元素
 
 如果在过程中经常遇到 `Error in mounted hook : Error:please transfer a valid prop path to form item` 这个问题，那就去检查一下是不是 prop 和 v-model 是不是匹配的
+
+
+## 动态增减表单项
+官方文档：https://element.eleme.cn/#/zh-CN/component/form
+添加一个点击事件就好了
+```html
+<el-button @click="handleAdd">新增</el-button>
+```
+```js
+handleAdd() {
+  this.temp.formData.push({
+    key: '',
+    name: '',
+    uuid: '',
+    value: ''
+  })
+}
+```
