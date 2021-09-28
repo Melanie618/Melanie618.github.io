@@ -99,3 +99,20 @@ handleAdd() {
   })
 }
 ```
+
+
+## 上传图片
+当使用 v-model 循环渲染表单时，如果出现上传多个图片时，会导致不论点哪个的上传，传递的值都添加到第一个表单上
+以 input= file 举例，只要在循环时在需要定义名称的地方加上 index 或者 item.id 就可以了
+在 label 中加上 `:for="'file'+item.id"`, input 中加上 `:id="'file'+item.id"` 和 `:name="'file'+item.id"`
+```html
+<el-form-item label="图片" :prop="'formData.'+index+'.value'" :rules="{required:true,message:'请选择图片',trigger:'blur'}">
+  <el-input v-model="item.value" />
+  <label v-show="item.type==1" :for="'file'+item.id" class="el-button el-button--danger el-button--mini">
+    <input :id="'file'+item.id" type="file" :name="'file'+item.id" style="display:none" @change="uploadImageToChange($event, item)">
+    <span>
+      上传图片
+    </span>
+  </label>
+</el-form-item>
+```
