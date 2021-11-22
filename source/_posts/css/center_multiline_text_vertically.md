@@ -1,0 +1,51 @@
+---
+title: 多行文本垂直居中
+date: 2021-11-22 11:58:52
+tags: 
+  - css
+
+categories: 
+  - 不以by小经验
+  - css
+---
+我想要文本垂直居中于 div，但文本内容会被修改，文字宽度超出 div 宽度换行展示，但文本依然要垂直居中
+说道垂直居中，第一反应就是 `line-height`
+![文字居中](/images/css/align.jpg)
+
+但当文本出现换行就会变成这个样子
+![文字换行后的 line-height 效果](/images/css/go-beyond.jpg)
+
+─ 你觉不觉得他很丑，而且怪怪的？
+
+─ 嗯，我也这样觉得
+
+## 解决方案
+通过 `display: table-cell;` 结合 `vertical-align: middle;` 来解决
+
+```vue
+<template>
+  <div class="banner">
+    <h1 class="sidebar-title">test</h1>
+  </div>
+</template>
+
+<style>
+.banner {
+  margin: 0 auto;
+  display: table;
+  width: 300px;
+  height: 100px;
+  border: 1px solid #ccc;
+}
+
+.sidebar-title {
+  width: 100%;
+  height: 100%;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+</style>
+```
+此时不管是多少行文字都是垂直居中于 div 的
+![文字居中展示](/images/css/banner.jpg)
