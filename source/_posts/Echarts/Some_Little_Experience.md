@@ -27,12 +27,57 @@ https://q.cnblogs.com/q/79521/
 
 ## 图表宽高问题
 问题描述：
-父级盒子隐藏后，图表宽高会消失或变成默认值
+当父级盒子宽高设置为100%，图表宽度变成100%
+也有另一种情况，通过 display 来展示父级盒子是否展示，当父级盒子重新打开之后，图表宽高会变为0
 原因：
 Echarts 图表是根据你定义的div 的样式来确定图表的大小，当图表隐藏时，Echarts会找不到div的宽和高，再次显示时它会给自己一个非常小的默认宽高值，所以在隐藏显示后会发现它变得非常非常的小，或者消失
 
 解决：
-1. 通过设置 `rem` 或者 `px` 固定宽高
-2. 把 `v-show` 换成 `v-if` 就可以了
-3. 在完成绘画Echarts后添加代码： `$(window).resize(myChart.resize)`
-4. 在图表要显示的地方添加代码： `$(window).trigger('resize')`
+``` vue
+<template>
+  <div id="chart" ref="chart" class="chart" />
+</template>
+<script>
+export default {
+  methods: {
+    getChartWH() {
+      this.chart = this.$echarts.init(document.getElementById('chart')) // 获取父级盒子
+      this.chartWidth = this.$refs['chart'].clientWidth // 通过ref获取宽高
+      this.chartHeight = this.$refs['chart'].clientHeight
+      window.addEventListener('resize', () => { // 通过 addEventListener 监听变化
+        this.chart.resize() // 当父级盒子宽高变化时，重新渲染图表大小
+      })
+    }
+  }
+}
+</script>
+```
+
+如果你需要多个图表进行切换，只需要封装一下就可以多次调用了
+
+``` vue
+<template>
+  <div v-if="cur === 0" id="chart" ref="chart" class="chart" />
+  <div v-elseif="cur === 1" id="chart1" ref="chart1" class="chart" />
+  <div v-elseif="cur === 2" id="chart2" ref="chart2" class="chart" />
+</template>
+<script>
+export default {
+  methods: {
+    getChartWH(chart) {
+      this.chartWidth = this.$refs[chart].clientWidth // 通过ref获取宽高
+      this.chartHeight = this.$refs[chart].clientHeight
+      window.addEventListener('resize', () => { // 通过 addEventListener 监听变化
+        this.chart.resize() // 当父级盒子宽高变化时，重新渲染图表大小
+      })
+    },
+    getData() {
+      this.chart = this.$echarts.init(document.getElementById('chart'))
+      this.getChartWH('chart') // 调用方法时将传递的值替换一下就可以了
+      this.chart.setOption(this.option)
+    }
+  }
+}
+</script>
+```
+这里需要注意的是调用 `getChartWH` 方法要在 dom 元素渲染成功后，否则会找不到
