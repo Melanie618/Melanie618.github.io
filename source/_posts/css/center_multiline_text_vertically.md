@@ -49,3 +49,5 @@ categories:
 ```
 此时不管是多少行文字都是垂直居中于 div 的
 ![文字居中展示](/images/css/banner.jpg)
+
+相关文档：https://www.cnblogs.com/cowboybusy/p/11459408.html
