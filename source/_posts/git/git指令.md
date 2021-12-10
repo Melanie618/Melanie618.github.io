@@ -85,3 +85,17 @@ git push -f origin master // 强制推送，特殊情况无法提交时使用
 在git版本1.6.6之后,可以通过 `git fetch origin --prune` 或它的简写 `git fetch origin -p` 来单独删除追踪分支
 
 删除分支相关文档：https://www.jianshu.com/p/5068997164cb
+
+## 修改分支名
+旧分支名用 oldName 代替，新分支名用 newName 代替
+### 本地分支重命名(还没有推送到远程)
+`git branch -m oldName newName`
+### 远程分支重命名 (已经推送远程-假设本地分支和远程对应分支名称相同)
+####  重命名远程分支对应的本地分支
+`git branch -m oldName newName`
+####  删除远程分支
+`git push --delete origin oldName`
+####  上传新命名的本地分支
+`git push origin newName`
+####  把修改后的本地分支与远程分支关联
+`git branch --set-upstream-to origin/newName`
