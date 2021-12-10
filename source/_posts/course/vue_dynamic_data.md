@@ -5,11 +5,10 @@ date: 2021-09-26 16:18:08
 tags: 
   - vue
   - ElementUI
-  - 动态数据
-  - 循环渲染
 
 categories: 
   - 不以by小经验
+  - ElementUI
 ---
 
 不知道大家在写项目的时候有没有遇到过这个需求：
