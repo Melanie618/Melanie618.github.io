@@ -28,6 +28,7 @@ categories:
 
 相关文档：https://juejin.cn/post/6844903897421578253
 
+CSS单位em是相对于父元素还是当前元素的字体大小
 https://blog.csdn.net/weixin_33920401/article/details/88728589?spm=1035.2023.3001.6557&utm_medium=distribute.pc_relevant_bbs_down.none-task-blog-2~default~OPENSEARCH~default-2.nonecase&depth_1-utm_source=distribute.pc_relevant_bbs_down.none-task-blog-2~default~OPENSEARCH~default-2.nonecase
 
 https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units

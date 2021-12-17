@@ -14,12 +14,6 @@ categories:
 # 项目中遇到的问题及解决方法
 除了遇到的问题，还有一些相关的功能方法类的总结
 
-
-
-CSS单位em是相对于父元素还是当前元素的字体大小
-https://blog.csdn.net/weixin_33920401/article/details/88728589?spm=1035.2023.3001.6557&utm_medium=distribute.pc_relevant_bbs_down.none-task-blog-2~default~OPENSEARCH~default-2.nonecase&depth_1-utm_source=distribute.pc_relevant_bbs_down.none-task-blog-2~default~OPENSEARCH~default-2.nonecase
-
-
 Array.prototype.includes()
 https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/includes
 

@@ -10,3 +10,10 @@ categories:
   - 不以by小经验
   - ElementUI
 ---
+
+页面使用多个el-upload
+相关文档：https://www.cnblogs.com/steamed-twisted-roll/p/9473644.html
+
+
+多个弹窗
+https://segmentfault.com/a/1190000040119048
