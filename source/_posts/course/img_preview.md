@@ -1,0 +1,114 @@
+---
+title: 图片预览
+# author: 不以by
+date: 2021-12-10 11:15:06
+tags: 
+  - Vue
+  - 图片预览
+
+categories: 
+  - 不以by小经验
+---
+点击预览图片全屏展示图片，背景添加蒙层，再次点击图片返回
+组件
+```vue
+<template>
+  <!-- 过渡动画 -->
+  <transition name="fade">
+    <div class="img-view" @click="closePreview">
+      <img :src="imgSrc" alt="加载失败">
+    </div>
+  </transition>
+</template>
+
+<script>
+export default {
+  props: ['imgSrc'],
+  methods: {
+    closePreview () {
+      // 发送事件
+      this.$emit('clickPreview')
+    }
+  }
+}
+</script>
+
+<style scoped>
+/*动画*/
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.2s linear;
+  transform: translate3D(0, 0, 0);
+}
+.fade-enter,
+.fade-leave-active {
+  transform: translate3D(100%, 0, 0);
+}
+/* Preview */
+.img-view {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+/*不限制图片大小，实现居中*/
+.img-view img {
+  width: 800px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 10000;
+}
+</style>
+```
+使用
+```vue
+<template>
+  <img
+    :src="imgSrc"
+    title="图片"
+    style="width:102px;margin-right:10px;"
+    @click="clickImg(imgSrc)"
+  >
+
+  <!-- 图片放大组件 -->
+  <preview v-if="showImg" @clickPreview="closePreview" :imgSrc="imgSrc" />
+</template>
+
+<script>
+import Preview from '@/components/Preview'
+
+export default {
+  components: { Preview },
+  data() {
+    return {
+    // 图片放大控制数据
+      showImg: false,
+      imgSrc: ''
+    }
+  },
+  methods: {
+    // 图片放大控制事件
+    clickImg (imgSrc) {
+      if (imgSrc) {
+        this.imgSrc = imgSrc
+        this.showImg = true
+      }
+    },
+    // 关闭事件
+    closePreview () {
+      this.imgSrc = ''
+      this.showImg = false
+    }
+  }
+}   
+</script>
+```
+
+相关文档：https://blog.csdn.net/weixin_45031595/article/details/112269851
