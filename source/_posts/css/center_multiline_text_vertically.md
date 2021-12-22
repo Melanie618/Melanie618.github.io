@@ -10,10 +10,10 @@ categories:
 ---
 我想要文本垂直居中于 div，但文本内容会被修改，文字宽度超出 div 宽度换行展示，但文本依然要垂直居中
 说道垂直居中，第一反应就是 `line-height`
-![文字居中](/images/css/align.jpg)
+![文字居中](https://github.com/Melanie618/Blog_Image/blob/main/images/css/align.jpg?raw=true)
 
 但当文本出现换行就会变成这个样子
-![文字换行后的 line-height 效果](/images/css/go-beyond.jpg)
+![文字换行后的 line-height 效果](https://github.com/Melanie618/Blog_Image/blob/main/images/css/go-beyond.jpg?raw=true)
 
 ─ 你觉不觉得他很丑，而且怪怪的？
 
@@ -48,6 +48,6 @@ categories:
 </style>
 ```
 此时不管是多少行文字都是垂直居中于 div 的
-![文字居中展示](/images/css/banner.jpg)
+![文字居中展示](https://github.com/Melanie618/Blog_Image/blob/main/images/css/banner.jpg?raw=true)
 
 相关文档：https://www.cnblogs.com/cowboybusy/p/11459408.html

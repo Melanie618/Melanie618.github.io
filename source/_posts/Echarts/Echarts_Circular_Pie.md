@@ -106,7 +106,7 @@ export default {
 </script>
 ```
 
-![pie](/images/Echarts/pie.jpg)
+![pie](https://github.com/Melanie618/Blog_Image/blob/main/images/Echarts/pie.jpg?raw=true)
 
 
 
@@ -289,12 +289,12 @@ export default {
 ```
 
 ##### 无数据渲染
-当图表没有数据时渲染可能会出现一个灰色的圈，比如这样
-![null](/images/Echarts/null.png)
+当图表没有数据时渲染可能会出现一个灰色的圈
+![null](https://github.com/Melanie618/Blog_Image/blob/main/images/Echarts/null.png?raw=true)
 我去看了 echarts 官网 api，发现当 series 中的 data 为空时会出现一个灰色的圈，
-![example](/images/Echarts/example.png)
+![example](https://github.com/Melanie618/Blog_Image/blob/main/images/Echarts/example.png?raw=true)
 但当 type 为 '' 时，灰色的圈就不见了
-![type=null](/images/Echarts/type=null.png)
+![type=null](https://github.com/Melanie618/Blog_Image/blob/main/images/Echarts/type=null.png?raw=true)
 
 
 但实际上使用时还是会有问题，所以我单独写了一个 div 用来放 暂无数据 这个字段

@@ -17,7 +17,7 @@ categories:
 
 <!-- ![未上传](/images/upload_Image_File/1.png)
 ![上传后效果](/images/upload_Image_File/2.png) -->
-![上传对比](/images/upload_Image_File/4.png)
+![上传对比](https://github.com/Melanie618/Blog_Image/blob/main/images/upload_Image_File/4.png?raw=true)
 
 ```vue
 <template>
@@ -126,7 +126,7 @@ export function createFile(data) {
 
 
 ## 上传按钮鼠标浮动样式
-![鼠标浮动样式](/images/upload_Image_File/5.png)
+![鼠标浮动样式](https://github.com/Melanie618/Blog_Image/blob/main/images/upload_Image_File/5.png?raw=true)
 ```css
 .avatar {
   /* 蒙层，通过定位固定位置在图片上 */

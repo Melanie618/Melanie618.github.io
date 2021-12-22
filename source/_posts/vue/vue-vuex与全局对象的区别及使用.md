@@ -28,7 +28,7 @@ categories:
 
 方法一：新建全局【global.js】文件，并在其中定义变量并导出，在使用的组件中引入该【global.js】文件，可为全局变量赋值（任意修改）或使用其值。
 
-方法二：在【main.js】中引入【global.js】：【import global from "../api/global.js";】，并通过【Vue.prototype.global=global】挂载到vue实例上，在其他组件中通过【this.global.authorization】调用。
+方法二：在【main.js】中引入【global.js】：`import global from "../api/global.js";`，并通过`Vue.prototype.global=global`挂载到vue实例上，在其他组件中通过`this.global.authorization`调用。
 
 # 3. vue定义全局方法
 

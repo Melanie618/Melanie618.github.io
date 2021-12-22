@@ -1,7 +1,7 @@
 # 头像
 avatar:
   enable: true
-  url: /images/avatar.jpg
+  url: https://github.com/Melanie618/Blog_Image/blob/main/images/avatar.jpg?raw=true
   rounded: true
   opacity: 1
   mickey_mouse: false
@@ -73,8 +73,8 @@ banner:
 # 图片背景
 bg_image:
   enable: true
-  url: /images/3.jpg # recomend image related to your mode
-  dark: /images/1.jpg
+  url: https://github.com/Melanie618/Blog_Image/blob/main/images/3.jpg?raw=true # recomend image related to your mode
+  dark: https://github.com/Melanie618/Blog_Image/blob/main/images/1.jpg?raw=true
   # blur: 30px
   opacity: 0.8
 
@@ -111,15 +111,15 @@ reward:
   # url: https://github.com/YunYouJun/yunyoujun.github.io/issues/96
   methods:
     - name: 支付宝
-      path: /images/alipay-qrcode.jpg
+      path: https://github.com/Melanie618/Blog_Image/blob/main/images/alipay-qrcode.jpg?raw=true
       color: "#00A3EE"
       icon: icon-alipay-line
     - name: QQ 支付
-      path: /images/qqpay-qrcode.png
+      path: https://github.com/Melanie618/Blog_Image/blob/main/images/qqpay-qrcode.png?raw=true
       color: "#12B7F5"
       icon: icon-qq-line
     - name: 微信支付
-      path: /images/wechatpay-qrcode.jpg
+      path: https://github.com/Melanie618/Blog_Image/blob/main/images/wechatpay-qrcode.jpg?raw=true
       color: "#2DC100"
       icon: icon-wechat-pay-line
 

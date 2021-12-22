@@ -66,35 +66,35 @@ function createComponent(Ctor, data, context, children, tag) {
     if (isUndef(Ctor)) {
         return
     }
-    var baseCtor = context.$options._base;
+    var baseCtor = context.$options._base
     if (isObject(Ctor)) {
-        Ctor = baseCtor.extend(Ctor);
+        Ctor = baseCtor.extend(Ctor)
     }
     if (typeof Ctor !== 'function') {
         return
     }
     // async component
-    var asyncFactory;
+    var asyncFactory
     if (isUndef(Ctor.cid)) {
-        asyncFactory = Ctor;
-        Ctor = resolveAsyncComponent(asyncFactory, baseCtor);
+        asyncFactory = Ctor
+        Ctor = resolveAsyncComponent(asyncFactory, baseCtor)
         if (Ctor === undefined) {
             return createAsyncPlaceholder(asyncFactory, data, context, children, tag)
         }
     }
-    data = data || {};
-    resolveConstructorOptions(Ctor);
-    installComponentHooks(data);
-    var name = Ctor.options.name || tag;
+    data = data || {}
+    resolveConstructorOptions(Ctor)
+    installComponentHooks(data)
+    var name = Ctor.options.name || tag
     var vnode = new VNode(
-        ("vue-component-" + (Ctor.cid) + (name ? ("-" + name) : '')),
+        ('vue-component-' + (Ctor.cid) + (name ? ('-' + name) : '')),
         data, undefined, undefined, undefined, context, {
             Ctor: Ctor,
             tag: tag,
             children: children
         },
         asyncFactory
-    );
+    )
     return vnode
 }
 ```
@@ -104,14 +104,14 @@ function createComponent(Ctor, data, context, children, tag) {
 因为在 Vue 中是调用`Vue.extend`方法来创建继承 Vue 的组件构造函数。在`Vue.extend`中会执行`Sub.cid = cid++`给组件构造函数的`cid`属性赋值。
 
 ```javascript
-var cid = 1;
+var cid = 1
 Vue.extend = function(extendOptions) {
     var Sub = function VueComponent(options) {
-        this._init(options);
-    };
-    Sub.prototype = Object.create(Super.prototype);
-    Sub.prototype.constructor = Sub;
-    Sub.cid = cid++;
+        this._init(options)
+    }
+    Sub.prototype = Object.create(Super.prototype)
+    Sub.prototype.constructor = Sub
+    Sub.cid = cid++
     return Sub
 }
 ```
@@ -128,94 +128,94 @@ function resolveAsyncComponent(factory, baseCtor) {
     if (isDef(factory.resolved)) {
         return factory.resolved
     }
-    var owner = currentRenderingInstance;
+    var owner = currentRenderingInstance
     if (owner && isDef(factory.owners) && factory.owners.indexOf(owner) === -1) {
-        factory.owners.push(owner);
+        factory.owners.push(owner)
     }
     if (isTrue(factory.loading) && isDef(factory.loadingComp)) {
         return factory.loadingComp
     }
     if (owner && !isDef(factory.owners)) {
-        var owners = factory.owners = [owner];
-        var sync = true;
-        var timerLoading = null;
-        var timerTimeout = null;
+        var owners = factory.owners = [owner]
+        var sync = true
+        var timerLoading = null
+        var timerTimeout = null
         (owner).$on('hook:destroyed', function() {
-            return remove(owners, owner);
-        });
+            return remove(owners, owner)
+        })
         var forceRender = function(renderCompleted) {
-            for (var i = 0, l = owners.length; i < l; i++) {
-                (owners[i]).$forceUpdate();
+            for (var i = 0; l = owners.length; i < l i++) {
+                (owners[i]).$forceUpdate()
             }
             if (renderCompleted) {
-                owners.length = 0;
+                owners.length = 0
                 if (timerLoading !== null) {
-                    clearTimeout(timerLoading);
-                    timerLoading = null;
+                    clearTimeout(timerLoading)
+                    timerLoading = null
                 }
                 if (timerTimeout !== null) {
-                    clearTimeout(timerTimeout);
-                    timerTimeout = null;
+                    clearTimeout(timerTimeout)
+                    timerTimeout = null
                 }
             }
-        };
+        }
         var resolve = once(function(res) {
-            factory.resolved = ensureCtor(res, baseCtor);
+            factory.resolved = ensureCtor(res, baseCtor)
             if (!sync) {
-                forceRender(true);
+                forceRender(true)
             } else {
-                owners.length = 0;
+                owners.length = 0
             }
-        });
+        })
         var reject = once(function(reason) {
             warn(
-                "Failed to resolve async component: " + (String(factory)) +
-                (reason ? ("\nReason: " + reason) : '')
-            );
+                'Failed to resolve async component: ' + (String(factory)) +
+                (reason ? ('\nReason: ' + reason) : '')
+            )
             if (isDef(factory.errorComp)) {
-                factory.error = true;
-                forceRender(true);
+                factory.error = true
+                forceRender(true)
             }
-        });
-        var res = factory(resolve, reject);
+        })
+        var res = factory(resolve, reject)
         if (isObject(res)) {
             if (isPromise(res)) {
                 if (isUndef(factory.resolved)) {
-                    res.then(resolve, reject);
+                    res.then(resolve, reject)
                 }
             } else if (isPromise(res.component)) {
-                res.component.then(resolve, reject);
+                res.component.then(resolve, reject)
 
                 if (isDef(res.error)) {
-                    factory.errorComp = ensureCtor(res.error, baseCtor);
+                    factory.errorComp = ensureCtor(res.error, baseCtor)
                 }
                 if (isDef(res.loading)) {
-                    factory.loadingComp = ensureCtor(res.loading, baseCtor);
+                    factory.loadingComp = ensureCtor(res.loading, baseCtor)
                     if (res.delay === 0) {
-                        factory.loading = true;
+                        factory.loading = true
                     } else {
                         timerLoading = setTimeout(function() {
-                            timerLoading = null;
+                            timerLoading = null
                             if (isUndef(factory.resolved) && isUndef(factory.error)) {
-                                factory.loading = true;
-                                forceRender(false);
+                                factory.loading = true
+                                forceRender(false)
                             }
-                        }, res.delay || 200);
+                        }, res.delay || 200)
                     }
                 }
                 if (isDef(res.timeout)) {
                     timerTimeout = setTimeout(function() {
-                        timerTimeout = null;
+                        timerTimeout = null
                         if (isUndef(factory.resolved)) {
                             reject(
-                                "timeout (" + (res.timeout) + "ms)"
-                            );
+                                'timeout (' + (res.timeout) + 'ms)'
+                            )
                         }
-                    }, res.timeout);
+                    }, res.timeout)
                 }
             }
         }
-        sync = false;
+        sync = false
         return factory.loading ? factory.loadingComp : factory.resolved
     }
 }
@@ -253,40 +253,40 @@ function resolveAsyncComponent(factory, baseCtor) {
     if (isDef(factory.resolved)) {
         return factory.resolved
     }
-    var owner = currentRenderingInstance;
+    var owner = currentRenderingInstance
     if (owner && isDef(factory.owners) && factory.owners.indexOf(owner) === -1) {
-        factory.owners.push(owner);
+        factory.owners.push(owner)
     }
     if (owner && !isDef(factory.owners)) {
-        var owners = factory.owners = [owner];
-        var sync = true;
+        var owners = factory.owners = [owner]
+        var sync = true
         (owner).$on('hook:destroyed', function() {
-            return remove(owners, owner);
-        });
+            return remove(owners, owner)
+        })
         var forceRender = function(renderCompleted) {
-            for (var i = 0, l = owners.length; i < l; i++) {
-                (owners[i]).$forceUpdate();
+            for (var i = 0; l = owners.length; i < l i++) {
+                (owners[i]).$forceUpdate()
             }
             if (renderCompleted) {
-                owners.length = 0;
+                owners.length = 0
             }
-        };
+        }
         var resolve = once(function(res) {
-            factory.resolved = ensureCtor(res, baseCtor);
+            factory.resolved = ensureCtor(res, baseCtor)
             if (!sync) {
-                forceRender(true);
+                forceRender(true)
             } else {
-                owners.length = 0;
+                owners.length = 0
             }
-        });
+        })
         var reject = once(function(reason) {
             warn(
                 "Failed to resolve async component: " + (String(factory)) +
                 (reason ? ("\nReason: " + reason) : '')
-            );
-        });
-        var res = factory(resolve, reject);
-        sync = false;
+            )
+        })
+        var res = factory(resolve, reject)
+        sync = false
         return factory.loading ? factory.loadingComp : factory.resolved
     }
 }
@@ -296,11 +296,11 @@ function resolveAsyncComponent(factory, baseCtor) {
 
 ```javascript
 function once(fn) {
-    var called = false;
+    var called = false
     return function() {
         if (!called) {
-            called = true;
-            fn.apply(this, arguments);
+            called = true
+            fn.apply(this, arguments)
         }
     }
 }
@@ -314,11 +314,11 @@ function once(fn) {
 
 ```javascript
 var resolve = once(function(res) {
-    factory.resolved = ensureCtor(res, baseCtor);
+    factory.resolved = ensureCtor(res, baseCtor)
     if (!sync) {
-        forceRender(true);
+        forceRender(true)
     } else {
-        owners.length = 0;
+        owners.length = 0
     }
 })
 ```
@@ -331,7 +331,7 @@ function ensureCtor(comp, base) {
         comp.__esModule ||
         (hasSymbol && comp[Symbol.toStringTag] === 'Module')
     ) {
-        comp = comp.default;
+        comp = comp.default
     }
     return isObject(comp) ?
         base.extend(comp) :
@@ -378,7 +378,7 @@ function(resolve, reject) {
 再回到`createComponent`方法中，看这段代码
 
 ```javascript
-Ctor = resolveAsyncComponent(asyncFactory, baseCtor);
+Ctor = resolveAsyncComponent(asyncFactory, baseCtor)
 if (Ctor === undefined) {
     return createAsyncPlaceholder(asyncFactory, data, context, children, tag)
 }
@@ -388,14 +388,14 @@ if (Ctor === undefined) {
 
 ```javascript
 function createAsyncPlaceholder(factory, data, context, children, tag) {
-    var node = createEmptyVNode();
-    node.asyncFactory = factory;
+    var node = createEmptyVNode()
+    node.asyncFactory = factory
     node.asyncMeta = {
         data: data,
         context: context,
         children: children,
         tag: tag
-    };
+    }
     return node
 }
 ```
@@ -404,27 +404,27 @@ function createAsyncPlaceholder(factory, data, context, children, tag) {
 
 ```javascript
 var resolve = once(function(res) {
-    factory.resolved = ensureCtor(res, baseCtor);
+    factory.resolved = ensureCtor(res, baseCtor)
     if (!sync) {
-        forceRender(true);
+        forceRender(true)
     } else {
-        owners.length = 0;
+        owners.length = 0
     }
 })
-var owner = currentRenderingInstance;
+var owner = currentRenderingInstance
 if (owner && isDef(factory.owners) && factory.owners.indexOf(owner) === -1) {
-    factory.owners.push(owner);
+    factory.owners.push(owner)
 }
 if (owner && !isDef(factory.owners)) {
-    var owners = factory.owners = [owner];
+    var owners = factory.owners = [owner]
     var forceRender = function(renderCompleted) {
-        for (var i = 0, l = owners.length; i < l; i++) {
-            (owners[i]).$forceUpdate();
+        for (var i = 0; l = owners.length; i < l i++) {
+            (owners[i]).$forceUpdate()
         }
         if (renderCompleted) {
-            owners.length = 0;
+            owners.length = 0
         }
-    };
+    }
 }
 ```
 
@@ -440,9 +440,9 @@ if (owner && !isDef(factory.owners)) {
 
 ```javascript
 Vue.prototype.$forceUpdate = function() {
-    var vm = this;
+    var vm = this
     if (vm._watcher) {
-        vm._watcher.update();
+        vm._watcher.update()
     }
 }
 ```
@@ -451,10 +451,10 @@ Vue.prototype.$forceUpdate = function() {
 
 ```javascript
 // async component
-var asyncFactory;
+var asyncFactory
 if (isUndef(Ctor.cid)) {
-    asyncFactory = Ctor;
-    Ctor = resolveAsyncComponent(asyncFactory, baseCtor);
+    asyncFactory = Ctor
+    Ctor = resolveAsyncComponent(asyncFactory, baseCtor)
     if (Ctor === undefined) {
         return createAsyncPlaceholder(asyncFactory, data, context, children, tag)
     }
@@ -484,51 +484,51 @@ function resolveAsyncComponent(factory, baseCtor) {
     if (isDef(factory.resolved)) {
         return factory.resolved
     }
-    var owner = currentRenderingInstance;
+    var owner = currentRenderingInstance
     if (owner && isDef(factory.owners) && factory.owners.indexOf(owner) === -1) {
-        factory.owners.push(owner);
+        factory.owners.push(owner)
     }
     if (owner && !isDef(factory.owners)) {
-        var owners = factory.owners = [owner];
-        var sync = true;
+        var owners = factory.owners = [owner]
+        var sync = true
         (owner).$on('hook:destroyed', function() {
-            return remove(owners, owner);
-        });
+            return remove(owners, owner)
+        })
         var forceRender = function(renderCompleted) {
-            for (var i = 0, l = owners.length; i < l; i++) {
-                (owners[i]).$forceUpdate();
+            for (var i = 0; l = owners.length; i < l i++) {
+                (owners[i]).$forceUpdate()
             }
             if (renderCompleted) {
-                owners.length = 0;
+                owners.length = 0
             }
-        };
+        }
         var resolve = once(function(res) {
-            factory.resolved = ensureCtor(res, baseCtor);
+            factory.resolved = ensureCtor(res, baseCtor)
             if (!sync) {
-                forceRender(true);
+                forceRender(true)
             } else {
-                owners.length = 0;
+                owners.length = 0
             }
-        });
+        })
         var reject = once(function(reason) {
             warn(
                 "Failed to resolve async component: " + (String(factory)) +
                 (reason ? ("\nReason: " + reason) : '')
-            );
+            )
             if (isDef(factory.errorComp)) {
-                factory.error = true;
-                forceRender(true);
+                factory.error = true
+                forceRender(true)
             }
-        });
-        var res = factory(resolve, reject);
+        })
+        var res = factory(resolve, reject)
         if (isObject(res)) {
             if (isPromise(res)) {
                 if (isUndef(factory.resolved)) {
-                    res.then(resolve, reject);
+                    res.then(resolve, reject)
                 }
             }
         }
-        sync = false;
+        sync = false
         return factory.loading ? factory.loadingComp : factory.resolved
     }
 }
@@ -538,7 +538,7 @@ function resolveAsyncComponent(factory, baseCtor) {
 
 ```javascript
 if (isUndef(factory.resolved)) {
-    res.then(resolve, reject);
+    res.then(resolve, reject)
 }
 ```
 
@@ -576,97 +576,97 @@ function resolveAsyncComponent(factory, baseCtor) {
     if (isDef(factory.resolved)) {
         return factory.resolved
     }
-    var owner = currentRenderingInstance;
+    var owner = currentRenderingInstance
     if (owner && isDef(factory.owners) && factory.owners.indexOf(owner) === -1) {
-        factory.owners.push(owner);
+        factory.owners.push(owner)
     }
     if (isTrue(factory.loading) && isDef(factory.loadingComp)) {
         return factory.loadingComp
     }
     if (owner && !isDef(factory.owners)) {
-        var owners = factory.owners = [owner];
-        var sync = true;
-        var timerLoading = null;
-        var timerTimeout = null;
+        var owners = factory.owners = [owner]
+        var sync = true
+        var timerLoading = null
+        var timerTimeout = null
         (owner).$on('hook:destroyed', function() {
-            return remove(owners, owner);
-        });
+            return remove(owners, owner)
+        })
 
         var forceRender = function(renderCompleted) {
-            for (var i = 0, l = owners.length; i < l; i++) {
-                (owners[i]).$forceUpdate();
+            for (var i = 0; l = owners.length; i < l i++) {
+                (owners[i]).$forceUpdate()
             }
 
             if (renderCompleted) {
-                owners.length = 0;
+                owners.length = 0
                 if (timerLoading !== null) {
-                    clearTimeout(timerLoading);
-                    timerLoading = null;
+                    clearTimeout(timerLoading)
+                    timerLoading = null
                 }
                 if (timerTimeout !== null) {
-                    clearTimeout(timerTimeout);
-                    timerTimeout = null;
+                    clearTimeout(timerTimeout)
+                    timerTimeout = null
                 }
             }
-        };
+        }
 
         var resolve = once(function(res) {
-            factory.resolved = ensureCtor(res, baseCtor);
+            factory.resolved = ensureCtor(res, baseCtor)
             if (!sync) {
-                forceRender(true);
+                forceRender(true)
             } else {
-                owners.length = 0;
+                owners.length = 0
             }
-        });
+        })
 
         var reject = once(function(reason) {
             warn(
                 "Failed to resolve async component: " + (String(factory)) +
                 (reason ? ("\nReason: " + reason) : '')
-            );
+            )
             if (isDef(factory.errorComp)) {
-                factory.error = true;
-                forceRender(true);
+                factory.error = true
+                forceRender(true)
             }
-        });
+        })
 
-        var res = factory(resolve, reject);
+        var res = factory(resolve, reject)
 
         if (isObject(res)) {
             if (isPromise(res.component)) {
-                res.component.then(resolve, reject);
+                res.component.then(resolve, reject)
                 if (isDef(res.error)) {
-                    factory.errorComp = ensureCtor(res.error, baseCtor);
+                    factory.errorComp = ensureCtor(res.error, baseCtor)
                 }
                 if (isDef(res.loading)) {
-                    factory.loadingComp = ensureCtor(res.loading, baseCtor);
+                    factory.loadingComp = ensureCtor(res.loading, baseCtor)
                     if (res.delay === 0) {
-                        factory.loading = true;
+                        factory.loading = true
                     } else {
                         timerLoading = setTimeout(function() {
-                            timerLoading = null;
+                            timerLoading = null
                             if (isUndef(factory.resolved) && isUndef(factory.error)) {
-                                factory.loading = true;
-                                forceRender(false);
+                                factory.loading = true
+                                forceRender(false)
                             }
-                        }, res.delay || 200);
+                        }, res.delay || 200)
                     }
                 }
 
                 if (isDef(res.timeout)) {
                     timerTimeout = setTimeout(function() {
-                        timerTimeout = null;
+                        timerTimeout = null
                         if (isUndef(factory.resolved)) {
                             reject(
                                 "timeout (" + (res.timeout) + "ms)"
-                            );
+                            )
                         }
-                    }, res.timeout);
+                    }, res.timeout)
                 }
             }
         }
 
-        sync = false;
+        sync = false
         return factory.loading ? factory.loadingComp : factory.resolved
     }
 }

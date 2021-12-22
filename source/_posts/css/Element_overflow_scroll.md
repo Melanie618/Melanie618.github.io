@@ -74,12 +74,12 @@ const list = [
 </style>
 ```
 
-![元素展示](/images/css/scroll.png)
+![元素展示](https://github.com/Melanie618/Blog_Image/blob/main/images/css/scroll1.jpg?raw=true)
 
 现在就是这个样子的，很明显有一个元素被隐藏掉了，而我们需要让所有元素都展示出来，这个时候有两种解决方式：
 1. 调整父盒子高度，让元素展示出来
-![调整父盒子高度](/images/css/height-change.png)
-2. 让子级盒子内的元素滚动展示
+![调整父盒子高度](https://github.com/Melanie618/Blog_Image/blob/main/images/css/height-change.png?raw=true)
+1. 让子级盒子内的元素滚动展示
 
 # 元素滚动
 这里是通过 css3 动画来实现元素滚动的
@@ -121,7 +121,7 @@ const list = [
 ```
 
 来看一下效果吧：
-![滚动](/images/css/scroll.gif)
+![滚动](https://github.com/Melanie618/Blog_Image/blob/main/images/css/scroll.gif?raw=true)
 
 # 根据父级盒子高度滚动
 通过上图又可以发现两个问题：
@@ -164,4 +164,4 @@ export default {
 </style>
 ```
 来看一下效果
-![无缝滚动](/images/css/seamless_scrolling.gif)
+![无缝滚动](https://github.com/Melanie618/Blog_Image/blob/main/images/css/seamless_scrolling.gif?raw=true)
