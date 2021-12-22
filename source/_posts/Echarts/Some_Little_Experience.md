@@ -3,9 +3,9 @@ title: 使用Echarts时遇到的问题
 date: 2021-08-30 13:50:19
 tags:
   - Echarts
-  - 小教程
-categories:
   - 不以by小经验
+
+categories:
   - Echarts
 ---
 

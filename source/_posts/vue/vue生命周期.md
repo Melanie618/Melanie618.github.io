@@ -2,10 +2,10 @@
 title: vue生命周期
 date: 2020-12-17 19:30:12
 tags: 
-  - Vue
+  - vue
 
 categories: 
-  - Vue
+  - vue
 ---
 
 # 生命周期

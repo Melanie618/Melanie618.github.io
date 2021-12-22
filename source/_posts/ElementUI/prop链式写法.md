@@ -3,11 +3,12 @@ title: prop链式写法
 # author: 不以by
 date: 2021-09-26 16:36:37
 tags: 
-  - Vue
+  - vue
   - ElementUI
+  - 不以by小经验
 
 categories: 
-  - 不以by小经验
+  - vue
   - ElementUI
 ---
 ```vue

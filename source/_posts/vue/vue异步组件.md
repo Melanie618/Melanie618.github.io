@@ -2,10 +2,10 @@
 title: vue异步组件
 date: 2021-01-29 20:37:08
 tags: 
-  - Vue
+  - vue
 
 categories: 
-  - Vue
+  - vue
 
 ---
 

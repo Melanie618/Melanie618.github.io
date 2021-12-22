@@ -6,9 +6,9 @@ tags:
   - 防抖节流
   - debounce
   - throttle
+  - 不以by小经验
 
 categories: 
-  - 不以by小经验
 ---
 # 防抖节流
 ### 防抖 debounce

@@ -2,11 +2,11 @@
 title: vue---vuex与全局对象的区别及使用
 date: 2021-01-29 20:33:22
 tags: 
-  - Vue
+  - vue
   - vuex
 
 categories: 
-  - Vue
+  - vue
 ---
 
 

@@ -2,11 +2,11 @@
 title: vue-keep-alive组件
 date: 2021-01-29 20:21:26
 tags: 
-  - Vue
+  - vue
   - keep-alive
 
 categories: 
-  - Vue
+  - vue
 ---
 
 # 原理

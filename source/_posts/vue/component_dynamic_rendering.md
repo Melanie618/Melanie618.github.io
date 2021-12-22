@@ -2,11 +2,11 @@
 title: 组件动态渲染
 date: 2021-11-22 11:29:40
 tags: 
-  - Vue
+  - vue
 
 categories: 
   - 不以by小经验
-  - Vue
+  - vue
 ---
 目前有一个需求是：通过接口获取组件位置并进行渲染，位置是固定的，但模块可能会不同，
 将目录 dir 下的组件渲染到 index.vue 上，常规做法是在 index.vue 中直接引入注册

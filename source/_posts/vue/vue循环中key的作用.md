@@ -2,10 +2,10 @@
 title: vue循环中key的作用
 date: 2021-01-12 09:40:22
 tags: 
-  - Vue
+  - vue
 
 categories: 
-  - Vue
+  - vue
 ---
 
 # key

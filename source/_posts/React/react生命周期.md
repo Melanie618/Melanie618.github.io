@@ -2,10 +2,10 @@
 title: react生命周期
 date: 2020-12-18 19:31:09
 tags: 
-  - React
+  - react
 
 categories: 
-  - React
+  - react
 ---
 
 ## react生命周期：

@@ -2,10 +2,10 @@
 title: vue面试题
 date: 2021-01-28 18:33:21
 tags: 
-  - Vue
+  - vue
 
 categories: 
-  - Vue
+  - vue
 ---
 
 # 1. history模式，页面返回404，如何解决？
