@@ -5,7 +5,7 @@ tags:
   - react
 
 categories: 
-  - react
+  - React
 ---
 
 ## react生命周期：

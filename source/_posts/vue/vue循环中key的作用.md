@@ -5,7 +5,7 @@ tags:
   - vue
 
 categories: 
-  - vue
+  - Vue
 ---
 
 # key

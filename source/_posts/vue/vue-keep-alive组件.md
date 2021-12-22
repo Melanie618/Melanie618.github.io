@@ -6,7 +6,7 @@ tags:
   - keep-alive
 
 categories: 
-  - vue
+  - Vue
 ---
 
 # 原理

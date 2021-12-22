@@ -6,7 +6,7 @@ tags:
   - TypeScript
 
 categories: 
-  - react
+  - React
   - TypeScript
 ---
 

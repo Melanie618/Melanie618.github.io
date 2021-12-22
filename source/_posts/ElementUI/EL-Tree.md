@@ -8,7 +8,7 @@ tags:
   - 不以by小经验
 
 categories: 
-  - vue
+  - Vue
   - ElementUI
 ---
 

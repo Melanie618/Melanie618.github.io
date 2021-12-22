@@ -5,7 +5,7 @@ tags:
   - vue
 
 categories: 
-  - vue
+  - Vue
 ---
 
 # 1. history模式，页面返回404，如何解决？

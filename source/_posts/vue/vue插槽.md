@@ -6,7 +6,7 @@ tags:
   - slot
 
 categories: 
-  - vue
+  - Vue
 
 ---
 

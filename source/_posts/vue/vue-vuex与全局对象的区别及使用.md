@@ -6,7 +6,7 @@ tags:
   - vuex
 
 categories: 
-  - vue
+  - Vue
 ---
 
 
