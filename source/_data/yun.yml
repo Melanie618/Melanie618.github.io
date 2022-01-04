@@ -1,7 +1,7 @@
 # 头像
 avatar:
   enable: true
-  url: https://github.com/Melanie618/Blog_Image/blob/main/images/avatar.jpg?raw=true
+  url: /images/avatar.jpg
   rounded: true
   opacity: 1
   mickey_mouse: false
