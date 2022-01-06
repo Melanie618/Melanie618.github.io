@@ -8,7 +8,7 @@
 
 安装 [hexo-wordcount](https://github.com/willin/hexo-wordcount)
 
-```sh
+```bash
 npm install hexo-wordcount
 # or
 # yarn add hexo-wordcount
@@ -30,7 +30,7 @@ wordcount:
 
 安装 [hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed)。
 
-```sh
+```bash
 npm install hexo-generator-feed --save
 ```
 
@@ -88,7 +88,7 @@ sticky: 2
 
 安装 [hexo-helper-live2d](https://github.com/EYHN/hexo-helper-live2d)
 
-```sh
+```bash
 npm install --save hexo-helper-live2d
 ```
 
@@ -168,7 +168,7 @@ wordcloud:
 
 安装 [hexo-tag-aplayer](https://github.com/MoePlayer/hexo-tag-aplayer)
 
-```sh
+```bash
 npm install hexo-tag-aplayer
 ```
 
@@ -201,7 +201,6 @@ aplayer:
 title: xxx
 aplayer: true
 ---
-
 ```
 
 :::
@@ -342,9 +341,7 @@ $E = mc^2$
 譬如：
 
 ```html
-<div>
-  \[ E = mc^2 \]
-</div>
+<div>\[ E = mc^2 \]</div>
 ```
 
 :::
@@ -386,6 +383,41 @@ $$
 pjax:
   enable: true
 ```
+
+## Mermaid
+
+Mermaid 允许您使用文本和代码创建图表和可视化。
+
+> Github: <https://github.com/knsv/mermaid>
+
+```yaml
+mermaid:
+  enable: false
+  options: # find more api options from https://github.com/knsv/mermaid/blob/master/src/mermaidAPI.js
+    startOnload: true # default true
+  global: false #default true
+```
+
+如下所示编写你的 Markdown:
+
+```md
+---
+title: Yun - Mermaid
+mermaid: true
+---
+
+<div class="mermaid">
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+</div>
+```
+
+> 示例可参考 [Yun - Mermaid](https://www.yunyoujun.cn/yun/mermaid.html)。
+
+More info see [Mermaid](https://mermaidjs.github.io/).
 
 ## 其他可用插件推荐
 

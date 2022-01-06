@@ -50,7 +50,7 @@ If you have not installed `hexo-generator-tag`, please enter `npm install hexo-g
 
 Create a new `tags` page, and enter the following in the root directory of the blog:
 
-```sh
+```bash
 hexo new page tags
 ```
 
@@ -63,7 +63,6 @@ date: 2017-10-09 19:11:58
 comments: false
 type: tags
 ---
-
 ```
 
 ## Categories
@@ -72,7 +71,7 @@ If you have not installed `hexo-generator-category`, please enter `npm install h
 
 Create a new `categories` page, and enter the following in the root directory of the blog:
 
-```sh
+```bash
 hexo new page categories
 ```
 
@@ -85,7 +84,6 @@ date: 2017-10-12 10:47:16
 comments: false
 type: categories
 ---
-
 ```
 
 ::: tip
@@ -114,7 +112,7 @@ Click on your avatar or name will enter the about page by default.
 
 You will need to create your about page.
 
-```sh
+```bash
 hexo new page about
 ```
 
@@ -153,7 +151,7 @@ You can also directly visit `/404.html` to see the effect locally.
 
 New Friends Link Page
 
-```sh
+```bash
 hexo new page links
 ```
 
@@ -189,7 +187,6 @@ links:
 placeholder: I haven't thought about what to say # The default description of YouChain
 tip: Friendchain loading in progress ~ If it fails, please refresh and try again ~
 ---
-
 ```
 
 Let the friend chain display on the sidebar [sidebar-page link](/guide/config.html#pagelink)
@@ -216,6 +213,42 @@ links: https://cdn.jsdelivr.net/gh/YunYouJun/friends@gh-pages/links.json
 random: true
 ```
 
+When you try to customize JSON manually, make sure that the JSON file is formatted correctly.
+
+Create a new JSON file, e.g. `source/links.json`.
+
+Template:
+
+```json
+[
+  {
+    "url": "博客链接",
+    "avatar": "头像地址",
+    "name": "作者昵称",
+    "blog": "博客名称",
+    "desc": "描述",
+    "color": "主题色",
+    "email": "电子邮箱（非必需）"
+  }
+]
+```
+
+Example:
+
+```json
+[
+  {
+    "url": "https://www.yunyoujun.cn",
+    "avatar": "https://cdn.jsdelivr.net/gh/YunYouJun/yunyoujun.github.io/images/avatar.jpg",
+    "name": "云游君",
+    "blog": "云游君的小站",
+    "desc": "All at sea.",
+    "color": "#0078e7",
+    "email": "me@yunyoujun.cn"
+  }
+]
+```
+
 > Note: Using jsdelivr may be delayed due to the CDN.
 > You can also use a custom domain name as I did. <https://friends.yunyoujun.cn/links.json>
 
@@ -234,7 +267,7 @@ girls:
   enable: true
 ```
 
-```sh
+```bash
 hexo new page girls
 ```
 
@@ -252,7 +285,6 @@ girls:
     url: character encyclopedia link
     reason: the reason for crushing
 ---
-
 ```
 
 Please refer to my [configuration](https://github.com/YunYouJun/yunyoujun.github.io/blob/hexo/source/girls/index.md).
@@ -280,15 +312,15 @@ The album collection is the navigation page of the album, you can place multiple
 
 New page for albums:
 
-```sh
+```bash
 hexo new page albums
 ```
 
 Enter `source/albums/index.md`, set `type`, and add album link, cover, etc.
 
 - `caption`: album title
-- url`: album link`
-- cover`: album cover`
+- `url`: album link
+- `cover`: album cover (It's better to use the link form that begins with `http` or `https`)
 - `desc`: album description
 
 ```yaml {2}
@@ -300,7 +332,6 @@ albums:
     cover: https://interactive-examples.mdn.mozilla.net/media/examples/elephant-660-480.jpg
     desc: 我想起那天夕阳下的奔跑
 ---
-
 ```
 
 ### Gallery
@@ -317,7 +348,7 @@ You just need to create the md file in the newly created albums folder above, fo
 
 Or create new via command line:
 
-```sh
+```bash
 hexo new page --path albums/sunset "夕阳"
 ```
 
@@ -354,7 +385,6 @@ photos:
     src: https://i.picsum.photos/id/198/510/300.jpg
     desc: That is my lost youth
 ---
-
 ```
 
 > Why use album collection as `albums` and `gallery` as album?
@@ -370,7 +400,7 @@ Create a new `slides/test.md` under `source`.
 
 Or command:
 
-```sh
+```bash
 hexo new page --path slides/test "Test Slides"
 ```
 
@@ -388,7 +418,6 @@ slide:
     history: true
     mouseWheel: true
 ---
-
 ```
 
 Then start writing your Slides file with Markdown directly below.

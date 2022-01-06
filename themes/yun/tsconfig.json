@@ -1,13 +1,16 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": ".",
+    "module": "ESNext",
+    "lib": ["DOM", "ESNext"],
+    "moduleResolution": "node",
     "resolveJsonModule": true,
-    "types": ["@vuepress/client/types"],
     "paths": {
-      "~/*": ["docs/.vuepress/*"]
-    }
+      "~/*": ["docs/.vitepress/*"]
+    },
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "types": ["vite-plugin-pwa/client"]
   },
-  "include": [
-    "docs/.vuepress/**/*"
-  ]
+  "include": ["docs/.vitepress/**/*"]
 }
