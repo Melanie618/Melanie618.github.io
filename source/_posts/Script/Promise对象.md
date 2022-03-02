@@ -47,13 +47,13 @@ Promise是抽象异步处理对象以及对其进行各种操作的组件。
 const promise = new Promise(function(resolve, reject) {
   // ... some code
 
-  if (/* 异步操作成功 调用resolve */){
-    resolve(value);
+  if (/* 异步操作成功 调用resolve */) {
+    resolve(value)
   } else {
     /* 异步操作失败 调用reject */
-    reject(error);
+    reject(error)
   }
-});
+})
 ```
 
 ![点击并拖拽以移动](data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==)
@@ -68,15 +68,15 @@ Promise 实例具有`then`方法，`then`方法是定义在原型对象`Promise.
 
 ```javascript
 const p1 = new Promise(function cb(resolve, reject) {
-    setTimeout(() => {
-        console.log('欢迎')
-        resolve()
-    }, 3000)
+  setTimeout(() => {
+    console.log('欢迎')
+    resolve()
+  }, 3000)
 })
 p1.then(_ => {
-    setTimeout(() => {
-        console.log('谢谢光临')
-    }, 2000)
+  setTimeout(() => {
+    console.log('谢谢光临')
+  }, 2000)
 })
 ```
 
@@ -90,17 +90,17 @@ p1.then(_ => {
 
 ```javascript
 const p1 = new Promise(function cb(resolve, reject) {
-    setTimeout(() => {
-        console.log('欢迎')
-        reject()
-    }, 3000)
+  setTimeout(() => {
+    console.log('欢迎')
+    reject()
+  }, 3000)
 })
 p1.then(_ => {
-    setTimeout(() => {
-        console.log('谢谢光临')
-    }, 2000)
+  setTimeout(() => {
+    console.log('谢谢光临')
+  }, 2000)
 }).catch(_ => {
-    console.log('出错了')
+  console.log('出错了')
 })
 ```
 
