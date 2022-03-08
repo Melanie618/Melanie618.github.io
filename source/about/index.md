@@ -73,7 +73,7 @@ icon: icon-cloud-line
 
 </details>
 
-#### 下方评论区就当作留言板了～（有啥想说的，欢迎留言）
+<!-- #### 下方评论区就当作留言板了～（有啥想说的，欢迎留言） -->
 
 <!-- 如果你有其他任何想问我的，也可以前往 [YunYouJun | GitHub Issues](https://github.com/YunYouJun/YunYouJun/issues)。 -->
 
