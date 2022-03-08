@@ -81,10 +81,10 @@ icon: icon-cloud-line
 
 ## Donate
 
-[![YunYouJun's Sponsors](https://github.com/YunYouJun/sponsors/workflows/Sponsors/badge.svg)](https://sponsors.yunyoujun.cn)
+<!-- [![YunYouJun's Sponsors](https://github.com/YunYouJun/sponsors/workflows/Sponsors/badge.svg)](https://sponsors.yunyoujun.cn) -->
 
 谢谢你们！
 
-- [赞助名单](https://sponsors.yunyoujun.cn/list)
+<!-- - [赞助名单](https://sponsors.yunyoujun.cn/list) -->
 
 喂，看到下面发光的按钮了吗！
