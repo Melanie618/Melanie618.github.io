@@ -41,17 +41,17 @@ icon: icon-cloud-line
 
 </details>
 
-## Contact
+<!-- ## Contact -->
 
-大部分社交方式都已放在了侧边栏中，你可以选择你喜欢的方式联系我或找我玩。
+<!-- 大部分社交方式都已放在了侧边栏中，你可以选择你喜欢的方式联系我或找我玩。 -->
 
-- Email：<me@yunyoujun.cn> （大概只用得到自己仍然有钱续费域名的时候吧！~~（笑）~~）
-- GitHub: [Melanie618](https://github.com/Melanie618)（为了博客，为了装B，为了小哥哥）
+<!-- - Email：<me@yunyoujun.cn> （大概只用得到自己仍然有钱续费域名的时候吧！~~（笑）~~） -->
+<!-- - GitHub: [Melanie618](https://github.com/Melanie618)（为了博客，为了装B，为了小哥哥） -->
 <!-- - 微博：[机智的云游君](https://weibo.com/jizhideyunyoujun)（辣鸡微博，总自动乱关注，但愿早日被替代） -->
 <!-- - 哔哩哔哩: [机智的云游君](https://space.bilibili.com/1579790)（许久前做过几个视频，但太凄惨没有动力继续下去，后试水专栏亦如此，主要用来看番剧） -->
 <!-- - 豆瓣: [云游君](https://www.douban.com/people/yunyoujun/)（用过 [Bangumi](https://bangumi.tv/user/yunyoujun)，但苦于速度太慢不稳定，转为豆瓣，标记看过的书影音） -->
-- 知乎：[不以by](https://www.zhihu.com/people/chi-yu-16-99-79)（只看不答，文明守法，因为自己实在没有有趣的经历可以装 B）
-- 网易云音乐: [临渊见雾](https://music.163.com/#/user/home?id=1624382187)（主用的音乐播放器，当遇到自认为好听的就会收藏）
+<!-- - 知乎：[不以by](https://www.zhihu.com/people/chi-yu-16-99-79)（只看不答，文明守法，因为自己实在没有有趣的经历可以装 B） -->
+<!-- - 网易云音乐: [临渊见雾](https://music.163.com/#/user/home?id=1624382187)（主用的音乐播放器，当遇到自认为好听的就会收藏） -->
 <!-- - Telegram Channel: [El Psy Congroo](https://t.me/elpsycn)（才整的频道，也许会用来记录吐槽日常，朋友圈太多现实世界朋友，导致都不好意思发空间）现在大致 = 博客 + 豆瓣 + 网易云音乐 + Twitter 更新聚合 -->
 <!-- - 微信公众号：[云游君](https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/about/white-qrcode-and-search.jpg) （并不喜欢用微信，所以其实没什么用，不过加了网站跳转链接的菜单，订阅勉强可以当作证明收藏过本站的标记？也许日后有空会搬一点文章过去？（咕咕咕）） -->
 <!-- - Twitter: [云游君](https://twitter.com/YunYouJun)（刚开始营业，每日一个 CSS 练习）（对不起，我还是咕了。） -->
