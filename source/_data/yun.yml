@@ -211,3 +211,10 @@ aplayer:
       id: 5382380646
       server: netease
       type: playlist
+
+# waline iscuss
+waline:
+  enable: true
+  serverURL: https://blog-iscuss.vercel.app/
+  visitor: true
+  comment: true
