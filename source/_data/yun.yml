@@ -218,3 +218,9 @@ waline:
   serverURL: https://blog-iscuss.vercel.app/
   visitor: true
   comment: true
+
+mourn:
+  enable: true
+  days:
+    - "4-4"
+    - "3-21"
