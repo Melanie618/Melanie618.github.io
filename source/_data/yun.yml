@@ -89,16 +89,19 @@ search:
 fireworks:
   enable: true
   colors:
-    - "102, 167, 221"
-    - "62, 131, 225"
-    - "33, 78, 194"
+    # - "102, 167, 221"
+    # - "62, 131, 225"
+    # - "33, 78, 194"
+    - "248, 171, 166"
+    - "240, 91, 114"
+    - "215, 19, 69"
 
 # Cursor 光标
 cursor:
   enable: true
-  default: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/css/md-cursors/pointer.cur
-  pointer: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/css/md-cursors/link.cur
-  text: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/css/md-cursors/text.cur
+  default: https://x.jscdn.host/release/ucode-x/source/Sakurairo_Vision/@2.4/cursor/emoji-cursor/texto.cur
+  pointer: https://x.jscdn.host/release/ucode-x/source/Sakurairo_Vision/@2.4/cursor/emoji-cursor/ayu.cur
+  text: https://x.jscdn.host/release/ucode-x/source/Sakurairo_Vision/@2.4/cursor/emoji-cursor/texto.cur
 
 # 页面链接
 # Extra links
