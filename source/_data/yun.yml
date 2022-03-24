@@ -73,7 +73,7 @@ banner:
 # 图片背景
 bg_image:
   enable: true
-  url: /images/3.jpg # recomend image related to your mode
+  url: https://cdn.jsdelivr.net/gh/Melanie618/CDN@v1.0/images/3.jpg # recomend image related to your mode
   dark: /images/1.jpg
   # blur: 30px
   opacity: 0.8
@@ -99,9 +99,9 @@ fireworks:
 # Cursor 光标
 cursor:
   enable: true
-  default: https://x.jscdn.host/release/ucode-x/source/Sakurairo_Vision/@2.4/cursor/emoji-cursor/texto.cur
-  pointer: https://x.jscdn.host/release/ucode-x/source/Sakurairo_Vision/@2.4/cursor/emoji-cursor/ayu.cur
-  text: https://x.jscdn.host/release/ucode-x/source/Sakurairo_Vision/@2.4/cursor/emoji-cursor/texto.cur
+  default: https://cdn.jsdelivr.net/gh/Melanie618/CDN@v1.0/cursor/arrow.cur
+  pointer: https://cdn.jsdelivr.net/gh/Melanie618/CDN@v1.0/cursor/hand1.cur
+  text: https://cdn.jsdelivr.net/gh/Melanie618/CDN@v1.0/cursor/vert.cur
 
 # 页面链接
 # Extra links
