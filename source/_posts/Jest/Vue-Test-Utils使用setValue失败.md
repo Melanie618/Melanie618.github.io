@@ -97,3 +97,5 @@ describe('设置input内容', () => {
 ```
 
 *注意：无论你使用哪种方式获取 `testInput` 元素，在触发输入事件时都要加上 `input`，否则会导致赋值失败
+
+参考文档：https://qiita.com/AtsushiEsashika/items/9a9f29fd11dd75f0508f
