@@ -5,7 +5,7 @@ date: 2019-06-21 13:06:06
 keywords: 链接
 description: 我的小伙伴们
 comments: true
-links: https://cdn.jsdelivr.net/gh/Melanie618/CDN@v1.1/json/friends.json
+links: https://cdn.jsdelivr.net/gh/Melanie618/CDN@v1.2.1/json/friends.json
 random: true
 ---
 
