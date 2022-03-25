@@ -1,7 +1,7 @@
 # 头像
 avatar:
   enable: true
-  url: /images/avatar.jpg
+  url: https://cdn.jsdelivr.net/gh/Melanie618/CDN@v1.1/images/avatar.jpg
   rounded: true
   opacity: 1
   mickey_mouse: false
@@ -12,7 +12,7 @@ avatar:
 
 # Favicon
 # # ---------------
-favicon: /images/logo.jpg
+favicon: https://cdn.jsdelivr.net/gh/Melanie618/CDN@v1.1/images/logo.jpg
 
 # Social Links.
 social:
@@ -73,8 +73,8 @@ banner:
 # 图片背景
 bg_image:
   enable: true
-  url: https://cdn.jsdelivr.net/gh/Melanie618/CDN@v1.0/images/3.jpg # recomend image related to your mode
-  dark: /images/1.jpg
+  url: https://cdn.jsdelivr.net/gh/Melanie618/CDN@v1.1/images/3.jpg # recomend image related to your mode
+  dark: https://cdn.jsdelivr.net/gh/Melanie618/CDN@v1.1/images/1.jpg
   # blur: 30px
   opacity: 0.8
 
@@ -99,9 +99,9 @@ fireworks:
 # Cursor 光标
 cursor:
   enable: true
-  default: https://cdn.jsdelivr.net/gh/Melanie618/CDN@v1.0/cursor/arrow.cur
-  pointer: https://cdn.jsdelivr.net/gh/Melanie618/CDN@v1.0/cursor/hand1.cur
-  text: https://cdn.jsdelivr.net/gh/Melanie618/CDN@v1.0/cursor/vert.cur
+  default: https://cdn.jsdelivr.net/gh/Melanie618/CDN@v1.1/cursor/arrow.cur
+  pointer: https://cdn.jsdelivr.net/gh/Melanie618/CDN@v1.1/cursor/hand1.cur
+  text: https://cdn.jsdelivr.net/gh/Melanie618/CDN@v1.1/cursor/vert.cur
 
 # 页面链接
 # Extra links
@@ -133,15 +133,15 @@ reward:
   # url: https://github.com/YunYouJun/yunyoujun.github.io/issues/96
   methods:
     - name: 支付宝
-      path: /images/alipay-qrcode.jpg
+      path: https://cdn.jsdelivr.net/gh/Melanie618/CDN@v1.1/images/alipay-qrcode.jpg
       color: "#00A3EE"
       icon: icon-alipay-line
     - name: QQ 支付
-      path: /images/qqpay-qrcode.png
+      path: https://cdn.jsdelivr.net/gh/Melanie618/CDN@v1.1/images/qqpay-qrcode.png
       color: "#12B7F5"
       icon: icon-qq-line
     - name: 微信支付
-      path: /images/wechatpay-qrcode.jpg
+      path: https://cdn.jsdelivr.net/gh/Melanie618/CDN@v1.1/images/wechatpay-qrcode.jpg
       color: "#2DC100"
       icon: icon-wechat-pay-line
 

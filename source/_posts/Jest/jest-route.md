@@ -121,4 +121,4 @@ describe('Home', () => {
 {"fullPath": "/", "hash": "", "matched": [{"beforeEnter": undefined, "components": {"default": undefined}, "instances": {}, "matchAs": undefined, "meta": {}, "name": "Home", "parent": undefined, "path": "", "props": {}, "redirect": undefined, "regex": /^(?:\/(?=$))?$/i}], "meta": {}, "name": "Home", "params": {}, "path": "/", "query": {}}
 ```
 测试成功！
-![ohhhhh](/images/Jest/oh.gif)
+![ohhhhh](https://cdn.jsdelivr.net/gh/Melanie618/CDN@v1.1/images/Jest/oh.gif)

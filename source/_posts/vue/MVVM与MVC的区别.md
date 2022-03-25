@@ -26,7 +26,7 @@ View 指的是所看到的页面。ViewModel 是 mvvm 模式的核心，它是�
 
 MVVM 流程图：
 
-![MVVM流程图](https://cdn.jsdelivr.net/gh/Melanie618/CDN@v1.0/images/vue/MVVM.png?raw=true)
+![MVVM流程图](https://cdn.jsdelivr.net/gh/Melanie618/CDN@v1.1/images/vue/MVVM.png?raw=true)
 
 #### MVVM 优点：
 
@@ -57,7 +57,7 @@ MVC 模式的特点在于实现关注点分离，即应用程序中的数据模�
 
 #### MVC 流程：
 
-![](http://nixwang.com/images/2016-03-23/mvvm.png)
+![](http://nixwang.com/2016-03-23/mvvm.png)
 
 #### MVC 优点：
 

@@ -14,7 +14,7 @@ icon: icon-cloud-line
 
 <div class="text-center">
   <div class="site-author-avatar">
-    <img src="/images/avatar.jpg" alt="portrait" title="ID : 云游君">
+    <img src="https://cdn.jsdelivr.net/gh/Melanie618/CDN@v1.1/images/avatar.jpg" alt="portrait" title="ID : 云游君">
   </div>
 </div>
 

@@ -91,6 +91,6 @@ categories:
 1. prop 接收的数据类型是 String
 2. `:prop="'domains.'+index+'.value'"` 和 `:prop="'domains['+index+'].value'"` 这两种传值最终都是转换成了 `domains.0.value` 字符串，这是一个字符串 而不是通过 `domains.0` 来取 `domains` 数组的第一个元素
 浮上部分源码
-![](https://cdn.jsdelivr.net/gh/Melanie618/CDN@v1.0/images/ElementUI/El-Form/1502856-20181010162553209-120878951.png?raw=true)
-![](https://cdn.jsdelivr.net/gh/Melanie618/CDN@v1.0/images/ElementUI/El-Form/1502856-20181010162743794-1203877402.png?raw=true)
-![](https://cdn.jsdelivr.net/gh/Melanie618/CDN@v1.0/images/ElementUI/El-Form/1502856-20181010162700061-1335666674.png?raw=true)
+![](https://cdn.jsdelivr.net/gh/Melanie618/CDN@v1.1/images/ElementUI/El-Form/1502856-20181010162553209-120878951.png?raw=true)
+![](https://cdn.jsdelivr.net/gh/Melanie618/CDN@v1.1/images/ElementUI/El-Form/1502856-20181010162743794-1203877402.png?raw=true)
+![](https://cdn.jsdelivr.net/gh/Melanie618/CDN@v1.1/images/ElementUI/El-Form/1502856-20181010162700061-1335666674.png?raw=true)
