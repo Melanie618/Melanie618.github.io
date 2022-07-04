@@ -72,13 +72,13 @@ git push -f origin master // 强制推送，特殊情况无法提交时使用
 
 指令 `git push origin --delete branch` ,该指令也会删除追踪分支
 
-![删除追踪分支和远程分支](https://upload-images.jianshu.io/upload_images/2291019-be805782391aac42.png?imageMogr2/auto-orient/strip|imageView2/2/w/576/format/webp)
+![删除追踪分支和远程分支](https://cdn.jsdelivr.net/gh/Melanie618/CDN@v1.2.2/images/git/deleteRemotely.webp)
 
 ### 删除追踪分支
 
 通过指令 `git branch --delete --remotes <remote>/<branch>` ,可以删除追踪分支,该操作并没有真正删除远程分支,而是删除的本地分支和远程分支的关联关系,即追踪分支.
 
-![删除追踪分支](https://upload-images.jianshu.io/upload_images/2291019-128d34afe0613ba3.png?imageMogr2/auto-orient/strip|imageView2/2/w/576/format/webp)
+![删除追踪分支](https://cdn.jsdelivr.net/gh/Melanie618/CDN@v1.2.2/images/git/deleteTrack.webp)
 
 通过命令行 `git push origin --delete branch` 会删除远程分支和追踪分支,不需要单独删除追踪分支,但是如果通过网页对远程分支进行删除,追踪分支是不会被删除的.
 
