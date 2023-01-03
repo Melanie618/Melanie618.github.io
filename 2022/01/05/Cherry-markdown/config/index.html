@@ -1,0 +1,276 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#0078E7"><meta name="author" content="不以by"><meta name="copyright" content="不以by"><meta name="generator" content="Hexo 6.3.0"><meta name="theme" content="hexo-theme-yun"><title>Cherry-Markdown config | 你看起来很好吃</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&amp;display=swap" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/star-markdown-css@0.1.25/dist/yun/yun-markdown.min.css"><script src="//at.alicdn.com/t/font_1140697_dxory92pb0h.js" async></script><script src="https://cdn.jsdelivr.net/npm/scrollreveal/dist/scrollreveal.min.js" defer></script><script>function initScrollReveal() {
+  [".post-card",".post-content img"].forEach((target)=> {
+    ScrollReveal().reveal(target);
+  })
+}
+document.addEventListener("DOMContentLoaded", initScrollReveal);
+document.addEventListener("pjax:success", initScrollReveal);
+</script><link class="aplayer-style-marker" rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script class="aplayer-script-marker" src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" defer></script><script class="meting-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js" defer></script><link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/Melanie618/CDN@v1.1/images/logo.jpg"><link rel="mask-icon" href="https://cdn.jsdelivr.net/gh/Melanie618/CDN@v1.1/images/logo.jpg" color="#0078E7"><link rel="preload" href="/css/hexo-theme-yun.css" as="style"><link rel="preload" href="/js/utils.js" as="script"><link rel="preload" href="/js/hexo-theme-yun.js" as="script"><link rel="prefetch" href="/js/sidebar.js" as="script"><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><script id="yun-config">
+    const Yun = window.Yun || {};
+    window.CONFIG = {"hostname":"example.com","root":"/","title":"你看起来很好吃","version":"1.7.0","mode":"auto","copycode":true,"page":{"isPost":true},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}.","hits":"${hits} results found","hits_time":"${hits} results found in ${time} ms"},"anonymous_image":"https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/avatar/none.jpg","say":{"api":"https://v1.hitokoto.cn","hitokoto":true},"fireworks":{"colors":["248, 171, 166","240, 91, 114","215, 19, 69"]}};
+  </script><link rel="stylesheet" href="/css/hexo-theme-yun.css"><script src="/js/utils.js"></script><script src="/js/hexo-theme-yun.js"></script><link rel="alternate" href="/atom.xml" title="你看起来很好吃" type="application/atom+xml"><meta name="description" content="配置    参数 说明 类型 可选值 默认值 必填    value 绑定值(markdown 原文) string - - 是   editor 编辑器配置 object 见下方 - 否   toolbars 工具栏配置 object 见下方 - 否   engine 使用文档链接 object 见下方 - 否   fileUpload 静态资源上传配置 function 见下方 - 是   e">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Cherry-Markdown config">
+<meta property="og:url" content="http://example.com/2022/01/05/Cherry-markdown/config/index.html">
+<meta property="og:site_name" content="你看起来很好吃">
+<meta property="og:description" content="配置    参数 说明 类型 可选值 默认值 必填    value 绑定值(markdown 原文) string - - 是   editor 编辑器配置 object 见下方 - 否   toolbars 工具栏配置 object 见下方 - 否   engine 使用文档链接 object 见下方 - 否   fileUpload 静态资源上传配置 function 见下方 - 是   e">
+<meta property="og:locale">
+<meta property="article:published_time" content="2022-01-05T03:55:11.000Z">
+<meta property="article:modified_time" content="2023-01-03T02:44:14.300Z">
+<meta property="article:author" content="不以by">
+<meta property="article:tag" content="vue">
+<meta property="article:tag" content="不以by小经验">
+<meta property="article:tag" content="cherry-markdown">
+<meta name="twitter:card" content="summary"><script src="/js/ui/mode.js"></script></head><body><script defer src="https://cdn.jsdelivr.net/npm/animejs@latest"></script><script defer src="/js/ui/fireworks.js"></script><canvas class="fireworks"></canvas><div class="container"><a class="sidebar-toggle hty-icon-button" id="menu-btn"><div class="hamburger hamburger--spin" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></div></a><div class="sidebar-toggle sidebar-overlay"></div><aside class="sidebar"><script src="/js/sidebar.js"></script><ul class="sidebar-nav"><li class="sidebar-nav-item sidebar-nav-toc hty-icon-button sidebar-nav-active" data-target="post-toc-wrap" title="Table of Contents"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-list-ordered"></use></svg></li><li class="sidebar-nav-item sidebar-nav-overview hty-icon-button" data-target="site-overview-wrap" title="Overview"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-passport-line"></use></svg></li></ul><div class="sidebar-panel" id="site-overview-wrap"><div class="site-info fix-top"><a class="site-author-avatar" href="/about/" title="不以by"><img width="96" loading="lazy" src="https://cdn.jsdelivr.net/gh/Melanie618/CDN@v1.1/images/avatar.jpg" alt="不以by"><span class="site-author-status" title="永远相信美好的事情即将发生">😊</span></a><div class="site-author-name"><a href="/about/">不以by</a></div><a class="site-name" href="/about/site.html">你看起来很好吃</a><sub class="site-subtitle"></sub><div class="site-desciption"></div></div><nav class="site-state"><a class="site-state-item hty-icon-button icon-home" href="/" title="Home"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-home-4-line"></use></svg></span></a><div class="site-state-item"><a href="/archives/" title="Archives"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-archive-line"></use></svg></span><span class="site-state-item-count">69</span></a></div><div class="site-state-item"><a href="/categories/" title="Categories"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-folder-2-line"></use></svg></span><span class="site-state-item-count">14</span></a></div><div class="site-state-item"><a href="/tags/" title="Tags"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-price-tag-3-line"></use></svg></span><span class="site-state-item-count">43</span></a></div><a class="site-state-item hty-icon-button" href="/about/#comment" title="留言板"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-clipboard-line"></use></svg></span></a></nav><hr style="margin-bottom:0.5rem"><hr style="margin:0.5rem 1rem"><div class="links"><a class="links-item hty-icon-button" href="/links/" title="我的小伙伴们" style="color:dodgerblue"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-genderless-line"></use></svg></a></div><br><a class="links-item hty-icon-button" id="toggle-mode-btn" href="javascript:;" title="Mode" style="color: #f1cb64"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-contrast-2-line"></use></svg></a></div><div class="sidebar-panel sidebar-panel-active" id="post-toc-wrap"><div class="post-toc"><div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE"><span class="toc-number">1.</span> <span class="toc-text">配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E8%BE%91%E5%99%A8%E9%85%8D%E7%BD%AE"><span class="toc-number">1.1.</span> <span class="toc-text">编辑器配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B7%A5%E5%85%B7%E6%A0%8F%E9%85%8D%E7%BD%AE"><span class="toc-number">1.2.</span> <span class="toc-text">工具栏配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E6%93%8E%E9%85%8D%E7%BD%AE"><span class="toc-number">1.3.</span> <span class="toc-text">引擎配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8B%93%E5%B1%95%E9%85%8D%E7%BD%AE"><span class="toc-number">1.4.</span> <span class="toc-text">拓展配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E4%B8%8A%E4%BC%A0%E9%85%8D%E7%BD%AE"><span class="toc-number">1.5.</span> <span class="toc-text">静态资源上传配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Markdown-constants"><span class="toc-number">1.6.</span> <span class="toc-text">Markdown.constants</span></a></li></ol></li></ol></div></div></div></aside><main class="sidebar-translate" id="content"><div id="post"><article class="hty-card post-block" itemscope itemtype="https://schema.org/Article"><link itemprop="mainEntityOfPage" href="http://example.com/2022/01/05/Cherry-markdown/config/"><span hidden itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="不以by"><meta itemprop="description"></span><span hidden itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="你看起来很好吃"></span><header class="post-header"><h1 class="post-title" itemprop="name headline">Cherry-Markdown config</h1><div class="post-meta"><div class="post-time" style="display:inline-block"><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-calendar-line"></use></svg></span> <time title="Created: 2022-01-05 11:55:11" itemprop="dateCreated datePublished" datetime="2022-01-05T11:55:11+08:00">2022-01-05</time><span class="post-meta-divider">-</span><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-calendar-2-line"></use></svg></span> <time title="Modified: 2023-01-03 10:44:14" itemprop="dateModified" datetime="2023-01-03T10:44:14+08:00">2023-01-03</time></div><span class="leancloud_visitors" id="/2022/01/05/Cherry-markdown/config/" data-flag-title="Cherry-Markdown config"><span class="post-meta-divider">-</span><span class="post-meta-item-icon" title="Views"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-eye-line"></use></svg> <span class="leancloud-visitors-count"></span></span></span><span class="post-meta-divider">-</span><a href="#comment"><span class="post-meta-item-icon" title="Comments"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-chat-3-line"></use></svg> <span class="waline-comment-count" id="/2022/01/05/Cherry-markdown/config/"></span></span></a><div class="post-classify"><span class="post-category"> <span class="post-meta-item-icon" style="margin-right:3px;"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-folder-line"></use></svg></span><span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a class="category-item" href="/categories/Vue/" style="--text-color:var(--hty-text-color)" itemprop="url" rel="index"><span itemprop="text">Vue</span></a></span> > <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a class="category-item" href="/categories/Vue/Cherry-Markdown/" style="--text-color:var(--hty-text-color)" itemprop="url" rel="index"><span itemprop="text">Cherry-Markdown</span></a></span></span><span class="post-tag"><span class="post-meta-divider">-</span><a class="tag-item" href="/tags/vue/" style="--text-color:var(--hty-text-color)"><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-price-tag-3-line"></use></svg></span><span class="tag-name">vue</span></a><a class="tag-item" href="/tags/%E4%B8%8D%E4%BB%A5by%E5%B0%8F%E7%BB%8F%E9%AA%8C/" style="--text-color:var(--hty-text-color)"><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-price-tag-3-line"></use></svg></span><span class="tag-name">不以by小经验</span></a><a class="tag-item" href="/tags/cherry-markdown/" style="--text-color:var(--hty-text-color)"><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-price-tag-3-line"></use></svg></span><span class="tag-name">cherry-markdown</span></a></span></div></div></header><section class="post-body" itemprop="articleBody"><div class="post-content markdown-body" style="--smc-primary:#0078E7;"><h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><hr>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>类型</th>
+<th>可选值</th>
+<th>默认值</th>
+<th>必填</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>value</td>
+<td>绑定值(markdown 原文)</td>
+<td>string</td>
+<td>-</td>
+<td>-</td>
+<td>是</td>
+</tr>
+<tr>
+<td>editor</td>
+<td>编辑器配置</td>
+<td>object</td>
+<td>见下方</td>
+<td>-</td>
+<td>否</td>
+</tr>
+<tr>
+<td>toolbars</td>
+<td>工具栏配置</td>
+<td>object</td>
+<td>见下方</td>
+<td>-</td>
+<td>否</td>
+</tr>
+<tr>
+<td>engine</td>
+<td>使用文档链接</td>
+<td>object</td>
+<td>见下方</td>
+<td>-</td>
+<td>否</td>
+</tr>
+<tr>
+<td>fileUpload</td>
+<td>静态资源上传配置</td>
+<td>function</td>
+<td>见下方</td>
+<td>-</td>
+<td>是</td>
+</tr>
+<tr>
+<td>externals</td>
+<td>引入第三方组件配置</td>
+<td>object</td>
+<td>见下方</td>
+<td>-</td>
+<td>否</td>
+</tr>
+</tbody></table>
+<h2 id="编辑器配置"><a href="#编辑器配置" class="headerlink" title="编辑器配置"></a>编辑器配置</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">editor</span>: &#123;</span><br><span class="line">  <span class="attr">theme</span>: <span class="string">&#x27;default&#x27;</span>,</span><br><span class="line">  <span class="attr">height</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">  <span class="attr">defaultModel</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Key: <code>theme</code></li>
+<li>Description: 用于配置编辑区域的主题</li>
+<li>Type: <code>String</code></li>
+<li>Default: <code>default</code></li>
+<li>Options: <a target="_blank" rel="noopener" href="https://codemirror.net/demo/theme.html">参考CodeMirror主题配置</a></li>
+</ul>
+<hr>
+<ul>
+<li>Key: <code>height</code></li>
+<li>Description: 用于配置编辑区域的高度，当挂载点存在内联设置的 height 样式时，以内联样式为主</li>
+<li>Type: <code>String</code></li>
+<li>Default: <code>100%</code></li>
+</ul>
+<hr>
+<ul>
+<li>Key: <code>defaultModel</code></li>
+<li>Description: 用于配置编辑器的初始编辑模式</li>
+<li>Type: <code>String</code></li>
+<li>Default: <code>&#39;edit&amp;preview&#39;</code></li>
+<li>Options:<ul>
+<li><code>editOnly</code>: 纯编辑模式（没有预览，可通过toolbar切换成双栏或预览模式）</li>
+<li><code>edit&amp;preview</code>: 双栏编辑预览模式</li>
+<li><code>previewOnly</code>: 预览模式（没有编辑框，toolbar只显示“返回编辑”按钮，可通过toolbar切换成编辑模式）</li>
+</ul>
+</li>
+</ul>
+<h2 id="工具栏配置"><a href="#工具栏配置" class="headerlink" title="工具栏配置"></a>工具栏配置</h2><p>Cherry Markdown Editor 包含三种可配置的工具栏，包括 toolbar(上方固定工具栏)、bubble(选中文本弹出工具栏)与 float(创建新行弹出工具栏)，在其中自定义增加需要的功能。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">toolbars</span>: &#123;</span><br><span class="line">  <span class="attr">theme</span>: <span class="string">&#x27;dark&#x27;</span>, <span class="comment">// light or dark</span></span><br><span class="line">  toolbar : [<span class="string">&#x27;bold&#x27;</span>, <span class="string">&#x27;italic&#x27;</span>, <span class="string">&#x27;strikethrough&#x27;</span>, <span class="string">&#x27;|&#x27;</span>, <span class="string">&#x27;header&#x27;</span>, <span class="string">&#x27;list&#x27;</span>, <span class="string">&#x27;insert&#x27;</span>, <span class="string">&#x27;graph&#x27;</span>,<span class="string">&#x27;togglePreview&#x27;</span>],</span><br><span class="line">  bubble : [<span class="string">&#x27;bold&#x27;</span>, <span class="string">&#x27;italic&#x27;</span>, <span class="string">&#x27;strikethrough&#x27;</span>, <span class="string">&#x27;sub&#x27;</span>, <span class="string">&#x27;sup&#x27;</span>, <span class="string">&#x27;|&#x27;</span>, <span class="string">&#x27;size&#x27;</span>], <span class="comment">// array or false</span></span><br><span class="line">  float : [<span class="string">&#x27;h1&#x27;</span>, <span class="string">&#x27;h2&#x27;</span>, <span class="string">&#x27;h3&#x27;</span>, <span class="string">&#x27;|&#x27;</span>, <span class="string">&#x27;checklist&#x27;</span>, <span class="string">&#x27;quote&#x27;</span>, <span class="string">&#x27;quickTable&#x27;</span>, <span class="string">&#x27;code&#x27;</span>], <span class="comment">// array or false</span></span><br><span class="line">  <span class="attr">customMenu</span>: &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Key: <code>theme</code></li>
+<li>Description: 用于配置编辑区域的主题</li>
+<li>Type: <code>String</code></li>
+<li>Default: <code>&#39;dark&#39;</code></li>
+<li>Options:<ul>
+<li><code>light</code>: 亮色主题</li>
+<li><code>dark</code>: 暗色主题</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>Key: <code>toolbar</code></li>
+<li>Description: 用于配置顶部工具栏及菜单按钮顺序</li>
+<li>Type: <code>Array&lt;string | &#123; insert: Array&lt;string&gt; &#125;&gt; | false</code></li>
+<li>Default: <code>[&#39;bold&#39;, &#39;italic&#39;, &#39;strikethrough&#39;, &#39;|&#39;, &#39;color&#39;, &#39;header&#39;, &#39;|&#39;, &#39;list&#39;, &#123; insert: [ &#39;image&#39;, &#39;audio&#39;, &#39;video&#39;, &#39;link&#39;, &#39;hr&#39;, &#39;br&#39;, &#39;code&#39;, &#39;formula&#39;, &#39;toc&#39;, &#39;table&#39;, &#39;line-table&#39;, &#39;bar-table&#39;, &#39;pdf&#39;, &#39;word&#39;, ], &#125;, &#39;graph&#39;, &#39;settings&#39;]</code></li>
+<li>Options:<ul>
+<li><code>false</code>: 传入 false 时关闭顶部菜单 (v4.0.11及以前版本不支持)</li>
+<li><code>string[]</code>: 菜单名称的集合，渲染的菜单按钮顺序跟随数组的元素顺序</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>Key: <code>bubble</code></li>
+<li>Description: 用于配置选中后的悬浮菜单</li>
+<li>Type: <code>Array&lt;string | &#123; insert: Array&lt;string&gt; &#125;&gt; | false</code></li>
+<li>Default: <code>[&#39;bold&#39;, &#39;italic&#39;, &#39;underline&#39;, &#39;strikethrough&#39;, &#39;sub&#39;, &#39;sup&#39;, &#39;|&#39;, &#39;size&#39;, &#39;color&#39;]</code></li>
+<li>Options:<ul>
+<li><code>false</code>: 传入 false 时关闭悬浮菜单</li>
+<li><code>string[]</code>: 菜单名称的集合，渲染的菜单按钮顺序跟随数组的元素顺序</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>Key: <code>float</code></li>
+<li>Description: 用于配置新行的行内菜单</li>
+<li>Type: <code>Array&lt;string | &#123; insert: Array&lt;string&gt; &#125;&gt; | false</code></li>
+<li>Default: <code>[&#39;bold&#39;, &#39;italic&#39;, &#39;underline&#39;, &#39;strikethrough&#39;, &#39;sub&#39;, &#39;sup&#39;, &#39;|&#39;, &#39;size&#39;, &#39;color&#39;]</code></li>
+<li>Options:<ul>
+<li><code>false</code>: 传入 false 时关闭新行行内菜单</li>
+<li><code>string[]</code>: 菜单名称的集合，渲染的菜单按钮顺序跟随数组的元素顺序</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>Key: <code>customMenu</code></li>
+<li>Description: 用于配置编辑区域的主题</li>
+<li>Type: <code>Array&lt;string | &#123; insert: Array&lt;string&gt; &#125;&gt; | false</code></li>
+<li>Default: <code>&#123;&#125;</code></li>
+</ul>
+<hr>
+<p>内置菜单名称参考</p>
+<ul>
+<li>Options:<ul>
+<li>|: 分隔符</li>
+<li>bold: 加粗</li>
+<li>italic: 斜体</li>
+<li>underline: 下划线</li>
+<li>strikethrough: 删除线</li>
+<li>sub: 下标</li>
+<li>sup: 上标</li>
+<li>size: 文字尺寸</li>
+<li>color: 文字颜色</li>
+<li>header: 标题菜单</li>
+<li>h1: 一级标题</li>
+<li>h2: 二级标题</li>
+<li>h3: 三级标题</li>
+<li>checklist: 任务列表</li>
+<li>list: 列表菜单</li>
+<li>insert: 插入菜单（可定制插入项）</li>
+<li>image: 插入图片</li>
+<li>audio: 插入音频</li>
+<li>video: 插入视频</li>
+<li>pdf: 插入pdf</li>
+<li>word: 插入word文档</li>
+<li>link: 插入链接</li>
+<li>hr: 插入水平分割线</li>
+<li>br: 插入新行</li>
+<li>code: 插入代码块</li>
+<li>formula: 插入数学公式</li>
+<li>toc: 插入目录</li>
+<li>table: 插入表格(gfm)</li>
+<li>line-table: 插入带折线图的高级表格(需要引入echarts)</li>
+<li>bar-table: 插入带柱状图的高级表格(需要引入echarts)</li>
+<li>graph: 画图(需要引入mermaid)</li>
+<li>settings: 设置</li>
+<li>switchModel: 切换编辑/预览模式(用于单栏编辑/预览模式)</li>
+<li>togglePreview: 打开/关闭预览区(用于左右分栏模式)</li>
+</ul>
+</li>
+</ul>
+<h2 id="引擎配置"><a href="#引擎配置" class="headerlink" title="引擎配置"></a>引擎配置</h2><p>可通过配置 engine 对象来配置 markdown 的解析规则，比如 table 是否可使用 chart（pro 版本可用）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">engine</span>: &#123;</span><br><span class="line">  <span class="comment">// 内置语法配置</span></span><br><span class="line">  <span class="attr">syntax</span>: &#123; <span class="comment">//                                       &lt;[Object]&gt; 语法规则</span></span><br><span class="line">    <span class="comment">// 语法开关</span></span><br><span class="line">    <span class="comment">// &#x27;hookName&#x27;: false,</span></span><br><span class="line">    <span class="comment">// 语法配置</span></span><br><span class="line">    <span class="comment">// &#x27;hookName&#x27;: &#123;</span></span><br><span class="line">    <span class="comment">//</span></span><br><span class="line">    <span class="comment">// &#125;</span></span><br><span class="line">    <span class="attr">list</span>: &#123;</span><br><span class="line">        <span class="attr">listNested</span>: <span class="literal">true</span> <span class="comment">// 同级列表类型转换后变为子级</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// pro 版本功能</span></span><br><span class="line">    <span class="attr">table</span>: &#123;</span><br><span class="line">        <span class="attr">enableChart</span>: <span class="literal">true</span>, <span class="comment">//                        &lt;[Boolean]&gt; 激活表格绘制图形</span></span><br><span class="line">        <span class="attr">chartRenderEngine</span>: <span class="title class_">EChartsTableEngine</span>, <span class="comment">//    &lt;[Array]&gt; 绘制图形的依赖</span></span><br><span class="line">        <span class="attr">externals</span>: [ <span class="string">&#x27;echarts&#x27;</span> ] <span class="comment">//                  &lt;[Constructor]&gt; 绘制图形的类，应该包括以下方法</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">codeBlock</span>: &#123;</span><br><span class="line">      <span class="attr">customRenderer</span>: &#123; <span class="comment">// 自定义语法渲染器</span></span><br><span class="line">        <span class="attr">mermaid</span>: <span class="keyword">new</span> <span class="title class_">MermaidCodeEngine</span>(&#123; mermaidAPI, <span class="attr">theme</span>: <span class="string">&#x27;neutral&#x27;</span> &#125;)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 自定义语法</span></span><br><span class="line">  <span class="attr">customSyntax</span>: &#123;</span><br><span class="line">    <span class="comment">// &#x27;SyntaxClass&#x27;: SyntaxClass   &lt;[Object]&gt; 自定义语法规则，同名语法会覆盖编辑器默认的语法</span></span><br><span class="line">    <span class="comment">// 名字冲突时强制覆盖内置语法解析器</span></span><br><span class="line">    <span class="comment">// &#x27;SyntaxClass&#x27;: &#123;             &lt;[String]&gt; hook 名字</span></span><br><span class="line">    <span class="comment">//   syntax: SyntaxClass,       &lt;[SyntaxBase]&gt; hook 构造函数</span></span><br><span class="line">    <span class="comment">//   force: true,               &lt;[Boolean]&gt; 是否强制覆盖同名 hook</span></span><br><span class="line">    <span class="comment">//   before: &#x27;HOOK_NAME&#x27;,       &lt;[String]&gt; hookName，在这个 hook 之前执行</span></span><br><span class="line">    <span class="comment">//   after: &#x27;HOOK_NAME&#x27;         &lt;[String]&gt; hookName，在这个 hook 之后执行</span></span><br><span class="line">    <span class="comment">// &#125;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Key: <code>syntax</code></li>
+<li>Description: 编辑器内置语法配置</li>
+<li>Type: <code>&#123; [HOOK_NAME: string]: &#123; [option: string]: any &#125; | boolean &#125;</code></li>
+<li>Default: <code>&#123;&#125;</code></li>
+</ul>
+<hr>
+<ul>
+<li>Key: <code>customSyntax</code></li>
+<li>Description: 自定义语法配置</li>
+<li>Type: <code>&#123; [HOOK_NAME: string]: &#123; [option: string]: any &#125; | boolean &#125;</code></li>
+<li>Default: <code>&#123;&#125;</code></li>
+</ul>
+<h2 id="拓展配置"><a href="#拓展配置" class="headerlink" title="拓展配置"></a>拓展配置</h2><p>外部依赖配置</p>
+<ul>
+<li>Type: <code>&#123; [packageName: string]: Object &#125;</code></li>
+<li>Default: <code>&#123;&#125;</code></li>
+<li>Usage: 从全局对象引入<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="title class_">Markdown</span>(&#123;</span><br><span class="line">  <span class="attr">externals</span>: &#123;</span><br><span class="line">    <span class="attr">echarts</span>: <span class="variable language_">window</span>.<span class="property">echarts</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+通过 <code>import</code> 引入<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> echarts <span class="keyword">from</span> <span class="string">&#x27;echarts&#x27;</span></span><br><span class="line"><span class="keyword">new</span> <span class="title class_">Markdown</span>(&#123;</span><br><span class="line">  <span class="attr">externals</span>: &#123;</span><br><span class="line">    echarts</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="静态资源上传配置"><a href="#静态资源上传配置" class="headerlink" title="静态资源上传配置"></a>静态资源上传配置</h2><p>Cherry Markdown Editor 不会直接上传图片或是文件，只会通过钩子函数(fileUpload)向上游提供用户所选择的图片、word 文档等，fileUpload 函数接受两个传入参数：</p>
+<ol>
+<li>file: 用户选择用来上传的文件对象</li>
+<li>callback: 当上游处理好静态资源后，应调用 callback 并传入上传好的静态资源路径回显在 markdown 编辑器中。</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="title class_">Cherry</span>(&#123;</span><br><span class="line">  <span class="attr">id</span>: <span class="string">&#x27;markdown&#x27;</span>,</span><br><span class="line">  <span class="attr">value</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">  <span class="title function_">fileUpload</span>(<span class="params">file, callback</span>) &#123;</span><br><span class="line">    <span class="title function_">callback</span>(url)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="Markdown-constants"><a href="#Markdown-constants" class="headerlink" title="Markdown.constants"></a>Markdown.constants</h2><p>Markdown 编辑器常量</p>
+<p><strong>Markdown.constants.HOOKS_TYPE_LIST</strong><br>语法 Hook 类型常量列表</p>
+<ul>
+<li>Type: <code>enum</code></li>
+<li>Value: <code>&#123; DEFAULT: &#39;sentence&#39;, SEN: &#39;sentence&#39;, PAR: &#39;paragraph&#39; &#125;</code></li>
+</ul>
+</div><div id="reward-container"><span class="hty-icon-button button-glow" id="reward-button" title="Donate" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === &quot;none&quot;) ? &quot;block&quot; : &quot;none&quot;;"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-hand-coin-line"></use></svg></span><div id="reward-comment">I'm so cute. Please give me money.</div><div id="qr" style="display:none;"><div style="display:inline-block"><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/Melanie618/CDN@v1.1/images/alipay-qrcode.jpg"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/Melanie618/CDN@v1.1/images/alipay-qrcode.jpg" alt="支付宝" title="支付宝"></a><div><span style="color:#00A3EE"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-alipay-line"></use></svg></span></div></div><div style="display:inline-block"><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/Melanie618/CDN@v1.1/images/qqpay-qrcode.png"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/Melanie618/CDN@v1.1/images/qqpay-qrcode.png" alt="QQ 支付" title="QQ 支付"></a><div><span style="color:#12B7F5"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-qq-line"></use></svg></span></div></div><div style="display:inline-block"><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/Melanie618/CDN@v1.1/images/wechatpay-qrcode.jpg"><img loading="lazy" src="https://cdn.jsdelivr.net/gh/Melanie618/CDN@v1.1/images/wechatpay-qrcode.jpg" alt="微信支付" title="微信支付"></a><div><span style="color:#2DC100"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-wechat-pay-line"></use></svg></span></div></div></div></div><ul class="post-copyright"><li class="post-copyright-author"><strong>Post author: </strong>不以by</li><li class="post-copyright-link"><strong>Post link: </strong><a href="http://example.com/2022/01/05/Cherry-markdown/config/" title="Cherry-Markdown config">http://example.com/2022/01/05/Cherry-markdown/config/</a></li><li class="post-copyright-license"><strong>Copyright Notice: </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener" title="CC BY-NC-SA 4.0 "><svg class="icon"><use xlink:href="#icon-creative-commons-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-by-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-nc-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-sa-line"></use></svg></a> unless otherwise stated.</li></ul></section></article><div class="post-nav"><div class="post-nav-item"><a class="post-nav-prev" href="/2022/01/06/Cherry-markdown/api/" rel="prev" title="Cherry-Markdown api"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-arrow-left-s-line"></use></svg><span class="post-nav-text">Cherry-Markdown api</span></a></div><div class="post-nav-item"><a class="post-nav-next" href="/2022/01/05/Cherry-markdown/Cherry-Markdown/" rel="next" title="Cherry-Markdown在vue中使用"><span class="post-nav-text">Cherry-Markdown在vue中使用</span><svg class="icon" aria-hidden="true"><use xlink:href="#icon-arrow-right-s-line"></use></svg></a></div></div></div><div class="hty-card" id="comment"><div class="comment-tooltip text-center"><span>要不要和我说些什么？</span><br></div><div id="waline"></div><script>Yun.utils.getScript("https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js", () => {
+  const walineConfig = {"enable":true,"serverURL":"https://blog-iscuss.vercel.app/","comment":true,"visitor":true,"el":"#waline","lang":"zh-CN"}
+  walineConfig.path = "/2022/01/05/Cherry-markdown/config/"
+  walineConfig.dark = 'html[data-user-color-scheme="dark"]'
+  new Waline(walineConfig)
+}, window.Waline);</script></div></main><footer class="sidebar-translate" id="footer"><div class="copyright"><span>&copy; 2019 – 2023 </span><span class="with-love" id="animate"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-cloud-line"></use></svg></span><span class="author"> 不以by</span></div><div class="live-time"><span>本博客已萌萌哒地运行</span><span id="display_live_time"></span><span class="moe-text">(●'◡'●)</span><script>function blog_live_time() {
+  setTimeout(blog_live_time, 1000);
+  const start = new Date('2019-04-12T00:00:00');
+  const now = new Date();
+  const timeDiff = (now.getTime() - start.getTime());
+  const msPerMinute = 60 * 1000;
+  const msPerHour = 60 * msPerMinute;
+  const msPerDay = 24 * msPerHour;
+  const passDay = Math.floor(timeDiff / msPerDay);
+  const passHour = Math.floor((timeDiff % msPerDay) / 60 / 60 / 1000);
+  const passMinute = Math.floor((timeDiff % msPerHour) / 60 / 1000);
+  const passSecond = Math.floor((timeDiff % msPerMinute) / 1000);
+  display_live_time.innerHTML = ` ${passDay} Days ${passHour} Hours ${passMinute} Minutes ${passSecond} Seconds`;
+}
+blog_live_time();
+</script></div></footer><a class="hty-icon-button" id="back-to-top" aria-label="back-to-top" href="#"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-arrow-up-s-line"></use></svg><svg class="progress-circle-container" viewBox="0 0 100 100"><circle class="progress-circle" id="progressCircle" cx="50" cy="50" r="48" fill="none" stroke="#0078E7" stroke-width="2" stroke-linecap="round"></circle></svg></a><script>function initMourn() {
+  const date = new Date();
+  const today = (date.getMonth() + 1) + "-" + date.getDate()
+  const mourn_days = ["4-4","3-21"]
+  if (mourn_days.includes(today)) {
+    document.documentElement.style.filter = "grayscale(1)";
+  }
+}
+initMourn();</script><div class="aplayer no-destroy" id="aplayer" data-id="7339390732" data-server="netease" data-type="playlist" data-fixed="true" data-theme="#0078E7" data-loop="all" data-order="list" data-preload="auto" data-volume="0.7" data-mutex data-lrctype="0" data-listmaxheight="340px" data-storagename="metingjs"></div></div></body></html>
