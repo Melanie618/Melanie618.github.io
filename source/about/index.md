@@ -35,9 +35,9 @@ icon: icon-cloud-line
 <details>
 <summary>此生想要完成的事情</summary>
 
-- [ ] 写一本值得出版的书
+- [ ] 暴瘦 暴富
 - [ ] 在乡村老家有一栋按照自己想法建造的房子
-- [x] 成为一个自己不讨厌的、有趣的人
+- [x] 成为一个有趣的人
 
 </details>
 
@@ -69,7 +69,7 @@ icon: icon-cloud-line
 <details>
 <summary>🐦</summary>
 
-<!-- - ~~明日方舟（官服）：云游君#5367~~ 长草了 -->
+- ~~蛋仔派对（官服）：野w不以~~ 
 
 </details>
 
